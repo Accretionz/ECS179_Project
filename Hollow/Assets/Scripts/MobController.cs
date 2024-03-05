@@ -16,7 +16,7 @@ public class MobController : MonoBehaviour
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Sprite");
+        player = GameObject.Find("Satyr");
     }
 
     // Watch when time greater than throttle and also keep track of lifespan to despawn.

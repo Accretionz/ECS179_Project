@@ -41,11 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-  - name: Player
-    uniqueID: 891704071
-=======
-  - name: Agent
-    uniqueID: 2625694089
->>>>>>> map_design2
-    locked: 0

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: -632072321, guid: 7b15bc5b7aa66254cbf12797c17f1240, type: 3}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.z
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca1d0fc84b4ef648a38bbfaaff2bb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   rotationSpeed: 25
 --- !u!50 &7342747025659980522
 Rigidbody2D:
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 10
   m_AngularDrag: 10
   m_GravityScale: 0
@@ -166,4 +166,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
