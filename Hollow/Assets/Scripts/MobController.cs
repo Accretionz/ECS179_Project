@@ -10,22 +10,13 @@ public class MobController : MonoBehaviour
     private float rotationSpeed;
 
     private Rigidbody2D rigidBody;
-    private float TimeSinceChecked = 0.0f;
-    private float Timer = 0.0f;
-    private int groupID = 1;
-    private float lifespan = 0.0f;
+    private GameObject player;
+
 
     void Awake()
     {
-        rigidBody = GetComponent<Rigidbody2D>(); 
-        this.lifespan = Random.Range(10.0f, 40.0f);
-    }
-
-    // Despawn pikimini. Unsubscribe before destroying.
-    private void Despawn()
-    {
-        //this.publisherManager.UnsubscribeFromGroup(groupID, OnMoveMessage);
-        Destroy(this.gameObject);
+        rigidBody = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Sprite");
     }
 
     // Watch when time greater than throttle and also keep track of lifespan to despawn.
@@ -68,17 +59,16 @@ public class MobController : MonoBehaviour
 
     private void move()
     {
-        Vector2 testPlayer = new Vector2(0, 0);
-        Vector2 enemyToPlayer = testPlayer - (Vector2)transform.position;
+        Vector2 enemyToPlayer = player.transform.position - transform.position;
         Vector2 targetDirection = enemyToPlayer.normalized;
         rigidBody.velocity = targetDirection * speed;
         if (targetDirection.x > 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
         }
     }

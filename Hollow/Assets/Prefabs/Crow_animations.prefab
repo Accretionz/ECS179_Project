@@ -12,17 +12,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crow_animations
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2947c921ae8b5cd4f852a7cc0fa02598, type: 2}
     - target: {fileID: 3626916397498700004, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -632072321, guid: 7b15bc5b7aa66254cbf12797c17f1240, type: 3}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 149b8be10ff186742b88999abc59ec73, type: 3}
       propertyPath: m_LocalScale.z
@@ -99,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca1d0fc84b4ef648a38bbfaaff2bb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   rotationSpeed: 25
 --- !u!50 &7342747025659980522
 Rigidbody2D:
