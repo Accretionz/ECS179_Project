@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MobController : MonoBehaviour
 {
@@ -8,42 +9,42 @@ public class MobController : MonoBehaviour
     private float speed;
     [SerializeField]
     private float rotationSpeed;
+    [SerializeField]
+    private NavMeshAgent agent;
+
 
     private Rigidbody2D rigidBody;
     private GameObject player;
+    private float timeTilDeath = 5.0f;
+    private float Timer = 0.0f;
 
-
-    void Awake()
+    void Start()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
+        //rigidBody = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Satyr");
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
-    // Watch when time greater than throttle and also keep track of lifespan to despawn.
-    public void Update()
-    {
-        /*
-        TimeSinceChecked += Time.deltaTime;
-        Timer += Time.deltaTime;
-        if (TimeSinceChecked >= 0.5f)
+    void Update() {
+        Vector2 enemyToPlayer = player.transform.position - transform.position;
+        Vector2 targetDirection = enemyToPlayer.normalized;
+        if (targetDirection.x > 0)
         {
-            TimeSinceChecked = 0.0f;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        if (Timer >= lifespan)
+        else
         {
-            Despawn();
-        }*/
-    }
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
-    private void FixedUpdate() {
-        rotate();
-        move();
-    }
-
-
-    private void updateTargetDirection()
-    {
-
+        }
+        this.agent.SetDestination(player.transform.position);
+        Timer += Time.deltaTime;
+        if (Timer > timeTilDeath)
+        {
+            Destroy(this.gameObject);
+        }
+        //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
 
     private void rotate()
@@ -59,6 +60,7 @@ public class MobController : MonoBehaviour
 
     private void move()
     {
+        /*
         Vector2 enemyToPlayer = player.transform.position - transform.position;
         Vector2 targetDirection = enemyToPlayer.normalized;
         rigidBody.velocity = targetDirection * speed;
@@ -70,6 +72,6 @@ public class MobController : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
-        }
+        }*/
     }
 }
