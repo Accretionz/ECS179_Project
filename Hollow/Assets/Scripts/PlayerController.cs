@@ -8,17 +8,22 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public float speed = 20.0f;
     private Rigidbody2D rb;
-    private Vector2 moveInput;
     private PlayerHealthController healthController;
     private int maxHealth = 12;
     private int currentHealth;
+    private SpriteRenderer spriteRenderer;
+    private Vector2 movementDirection;
+    private float currentSpeed;
+    private float lastHorizontalInput;
 
 
     void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        currentSpeed = 3f; // Initialize speed
+
         if(!rb)
         {
             Debug.LogError("No rigid body detected");
@@ -32,16 +37,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveInput.x = Input.GetAxis("Horizontal");
-        moveInput.y = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        movementDirection = new Vector2(horizontalInput, verticalInput).normalized;
 
-        Debug.Log("X: " + moveInput.x);
-        Debug.Log("Y: " + moveInput.y);
-        Debug.Log("Here");
-       
-        moveInput.Normalize();
+        if (horizontalInput != 0f)
+        {
+            lastHorizontalInput = horizontalInput;
+        }
 
-        rb.velocity = moveInput * speed;
+        spriteRenderer.flipX = lastHorizontalInput < 0f;
+
+        rb.velocity = movementDirection * currentSpeed;
         
 
     }
