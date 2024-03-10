@@ -136,7 +136,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!58 &6875718440688830802
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  rotationSpeed: 25
   agent: {fileID: 3653604427197082627}
+  animate: {fileID: 4490463370972041022}
 --- !u!195 &3653604427197082627
 NavMeshAgent:
   m_ObjectHideFlags: 0

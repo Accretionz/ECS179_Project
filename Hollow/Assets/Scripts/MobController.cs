@@ -8,15 +8,17 @@ public class MobController : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float rotationSpeed;
-    [SerializeField]
     private NavMeshAgent agent;
+    [SerializeField]
+    private Animator animate;
+
 
 
     private Rigidbody2D rigidBody;
     private GameObject player;
     private float timeTilDeath = 5.0f;
     private float Timer = 0.0f;
+    private int health = 1;
 
     void Start()
     {
@@ -39,25 +41,22 @@ public class MobController : MonoBehaviour
 
         }
         this.agent.SetDestination(player.transform.position);
-        Timer += Time.deltaTime;
-        if (Timer > timeTilDeath)
+        if (health <= 0)
         {
-            Destroy(this.gameObject);
+            animate.SetBool("isDead", true);
+            // Drop something.
+            Destroy(this.gameObject, 0.55f);
         }
         //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
 
-    private void rotate()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        /*
-        Vector2 testPlayer = new Vector2(0, 0);
-        Vector2 enemyToPlayer = testPlayer - (Vector2)transform.position;
-        Vector2 targetDirection = enemyToPlayer.normalized; 
-        Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
-        Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        rigidBody.SetRotation(rotation);*/
+        if (collision.gameObject.name == "Satyr") ;
+        {
+            health -= 1;
+        }
     }
-
     private void move()
     {
         /*
