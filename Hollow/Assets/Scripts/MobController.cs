@@ -12,11 +12,15 @@ public class MobController : MonoBehaviour
     [SerializeField]
     private NavMeshAgent agent;
 
-
+    [SerializeField]
+    public int maxHealth = 50;
+    int currentHealth;
     private Rigidbody2D rigidBody;
     private GameObject player;
-    private float timeTilDeath = 5.0f;
+    private float timeTilDeath = 15.0f;
     private float Timer = 0.0f;
+
+    private Animator animator;
 
     void Start()
     {
@@ -24,6 +28,8 @@ public class MobController : MonoBehaviour
         player = GameObject.Find("Satyr");
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Update() {
@@ -46,6 +52,25 @@ public class MobController : MonoBehaviour
         }
         //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        animator.SetTrigger("Damaged");
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Enemey died!");
+        animator.SetBool("isDead", true);
+        Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+
+        // Destroy(gameObject);
+    }   
 
     private void rotate()
     {
