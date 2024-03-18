@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private PlayerHealthController healthController;
     private int maxHealth = 12;
     private int currentHealth;
+    private ExperienceController experienceController;
+    private int maxExperience = 1000;
+    private int currentExperience;
     private SpriteRenderer spriteRenderer;
     private Vector2 movementDirection;
     private float currentSpeed;
@@ -29,28 +32,15 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("No rigid body detected");
         }
 
+        // set up health bar for player
         healthController = GameObject.Find("HealthBar").GetComponent<PlayerHealthController>();
         healthController.SetHealth(maxHealth);
         currentHealth = maxHealth;
-       
-    }
 
-    void Update()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        movementDirection = new Vector2(horizontalInput, verticalInput).normalized;
-
-        if (horizontalInput != 0f)
-        {
-            lastHorizontalInput = horizontalInput;
-        }
-
-        spriteRenderer.flipX = lastHorizontalInput < 0f;
-
-        rb.velocity = movementDirection * currentSpeed;
-        
-
+        // set up experience bar for player
+        experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
+        experienceController.SetExperience(0);
+        currentExperience = 0;
     }
 
     // if enemy touches player, lose heart
@@ -76,5 +66,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    public void ExperienceChange(int experience)
+    {
+        currentExperience += experience;
+        experienceController.SetExperience(currentExperience);
+        if(currentExperience >= maxExperience)
+        {
+            LevelUp();
+        }
+        
+    }
+
+    public void LevelUp()
+    {
+        // each higher level gives player one more heart
+        maxHealth += 2;
+        currentHealth = maxHealth;
+
+        // currentLevel++
+
+        currentExperience = 0;
+    }
+
+    void Update()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        movementDirection = new Vector2(horizontalInput, verticalInput).normalized;
+
+        if (horizontalInput != 0f)
+        {
+            lastHorizontalInput = horizontalInput;
+        }
+
+        spriteRenderer.flipX = lastHorizontalInput < 0f;
+
+        rb.velocity = movementDirection * currentSpeed;
+        
+
+    }
 }
