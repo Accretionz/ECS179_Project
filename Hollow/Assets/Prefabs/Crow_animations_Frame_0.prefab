@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6875718440688830802}
   - component: {fileID: 155720901440071403}
   - component: {fileID: 3653604427197082627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crow_animations_Frame_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 2436706882690668455}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2947c921ae8b5cd4f852a7cc0fa02598, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3670ae24692d74e9f8213c0ec17314f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   speed: 2
   rotationSpeed: 25
   agent: {fileID: 3653604427197082627}
+  maxHealth: 50
 --- !u!195 &3653604427197082627
 NavMeshAgent:
   m_ObjectHideFlags: 0
