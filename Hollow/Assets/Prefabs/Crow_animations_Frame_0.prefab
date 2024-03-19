@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6875718440688830802}
   - component: {fileID: 155720901440071403}
   - component: {fileID: 3653604427197082627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crow_animations_Frame_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 2436706882690668455}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2947c921ae8b5cd4f852a7cc0fa02598, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3670ae24692d74e9f8213c0ec17314f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!58 &6875718440688830802
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,8 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  rotationSpeed: 25
   agent: {fileID: 3653604427197082627}
-  animate: {fileID: 4490463370972041022}
+  maxHealth: 50
 --- !u!195 &3653604427197082627
 NavMeshAgent:
   m_ObjectHideFlags: 0

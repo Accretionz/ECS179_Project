@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CrowController : MonoBehaviour
+public class MobController : MonoBehaviour
 {
     [SerializeField]
     private float speed;
     [SerializeField]
-    private NavMeshAgent agent;
+    private float rotationSpeed;
     [SerializeField]
-    private Animator animate;
+    private NavMeshAgent agent;
 
+    [SerializeField]
+    public int maxHealth = 50;
+    int currentHealth;
+    private Rigidbody2D rigidBody;
     private GameObject player;
-    private float timeTilDeath = 5.0f;
+    private float timeTilDeath = 15.0f;
     private float Timer = 0.0f;
-    private int health = 1;
+
+    private Animator animator;
 
     void Start()
     {
+        //rigidBody = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Satyr");
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Update() {
@@ -37,22 +45,44 @@ public class CrowController : MonoBehaviour
 
         }
         this.agent.SetDestination(player.transform.position);
+        Timer += Time.deltaTime;
+        if (Timer > timeTilDeath)
+        {
+            Destroy(this.gameObject);
+        }
         //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(int damage)
     {
-        if (collision.gameObject.name == "Satyr") ;
+        currentHealth -= damage;
+        animator.SetTrigger("Damaged");
+        if (currentHealth <= 0)
         {
-            health -= 1;
-            if (health <= 0)
-            {
-                animate.SetBool("isDead", true);
-                // Drop something.
-                Destroy(this.gameObject, 0.55f);
-            }
+            Die();
         }
     }
+
+    void Die()
+    {
+        Debug.Log("Enemey died!");
+        animator.SetBool("isDead", true);
+        Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+
+        // Destroy(gameObject);
+    }   
+
+    private void rotate()
+    {
+        /*
+        Vector2 testPlayer = new Vector2(0, 0);
+        Vector2 enemyToPlayer = testPlayer - (Vector2)transform.position;
+        Vector2 targetDirection = enemyToPlayer.normalized; 
+        Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
+        Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        rigidBody.SetRotation(rotation);*/
+    }
+
     private void move()
     {
         /*
