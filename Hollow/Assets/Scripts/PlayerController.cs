@@ -80,11 +80,10 @@ public class PlayerController : MonoBehaviour
     public void LevelUp()
     {
         // each higher level gives player one more heart
-        maxHealth += 2;
+        healthController.AddHeart();
         currentHealth = maxHealth;
 
         // currentLevel++
-
         currentExperience = 0;
     }
 
