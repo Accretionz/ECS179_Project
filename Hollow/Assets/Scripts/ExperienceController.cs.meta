@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Hollow/Assets/Scripts/ExperienceController.cs.meta
 guid: da6947a65078e41d8866c740d5283f1d
 ========
 guid: 134501315befdcf4288471df5895ef84
 >>>>>>>> 02414bb (	modified:   Hollow/Assets/Scenes/SampleScene.unity):Hollow/Assets/Scripts/Timer.cs.meta
+=======
+guid: da6947a65078e41d8866c740d5283f1d
+>>>>>>> 0145856 (experience bar added)
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
