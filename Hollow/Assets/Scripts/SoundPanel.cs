@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 /**
  * Adapted from "Unity AUDIO MANAGER Tutorial" by Rehope Games:
  * https://www.youtube.com/watch?v=rdX7nhH6jdM
+ * Adapted from "PAUSE MENU in Unity" by Brackeys:
+ * https://www.youtube.com/watch?v=JivuXdrIHK0
  * 
  * Audio assets from: https://gamedeveloperstudio.itch.io/icon-pack
  * Button assets from: https://byandrox.itch.io/crimson-fantasy-gui,
@@ -22,16 +24,31 @@ public class SoundPanel : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    void Awake()
+    {
+        Debug.Log("Script Works--Awake");
+    }
+
+    void Start()
+    {
+        Debug.Log("Script Works--Start");
+    }
+
+
     private void Update()
     {
+        Debug.Log("Script Works--Update");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("Escape button pressed");
             if (GameIsPaused)
             {
+                Debug.Log("Now resume game");
                 Resume();
             }
             else
             {
+                Debug.Log("Now pause game");
                 Pause();
             }
         }
@@ -54,6 +71,7 @@ public class SoundPanel : MonoBehaviour
         GameIsPaused = true;
     }
 
+    /*
     public void LoadMenu()
     {
         Time.timeScale = 1f;
@@ -75,6 +93,7 @@ public class SoundPanel : MonoBehaviour
         // main menu sceneID = 0
         SceneManager.LoadScene(sceneID);
     }
+    */
     
 
     //-------------------For toggle button and sliders--------------------------
