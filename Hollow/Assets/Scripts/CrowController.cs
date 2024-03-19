@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MobController : MonoBehaviour
+public class CrowController : MonoBehaviour
 {
     [SerializeField]
     private float speed;
@@ -65,7 +65,7 @@ public class MobController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemey died!");
+        Debug.Log("Enemy died!");
         animator.SetBool("isDead", true);
         Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
 

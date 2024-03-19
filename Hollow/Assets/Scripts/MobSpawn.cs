@@ -19,6 +19,7 @@ public class MobSpawn : MonoBehaviour
     private Camera managedCamera;
 
     private float timeUntilSpawn;
+    private float timeUntilRangedSpawn = 20.0f;
     private float Timer;
 
     void Start()
@@ -59,7 +60,22 @@ public class MobSpawn : MonoBehaviour
                 UnityEngine.AI.NavMesh.SamplePosition(spawnLocation, out hit, Mathf.Infinity, UnityEngine.AI.NavMesh.AllAreas);
                 spawnLocation = hit.position;
                 spawnLocation.z = 0;
-                Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
+                if (Timer >= timeUntilRangedSpawn)
+                {
+                    int randMob = Random.Range(0, 3);
+                    if (randMob == 0)
+                    {
+                        Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
+                    }
+                }
+                else
+                {
+                    Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
+                }
             }
             setRandomSpawnTime();
         }

@@ -15,10 +15,14 @@ public class BatController : MonoBehaviour
     private float maxDistance;
     [SerializeField]
     private float timeSinceAttack;
+    [SerializeField]
+    private GameObject projectile;
 
     private GameObject player;
-    private float Timer = 0.0f;
+    private float Timer = 5.0f;
     private int health = 1;
+    private float timeTilDeath = 15.0f;
+    private float deathTimer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -50,14 +54,22 @@ public class BatController : MonoBehaviour
         }
         else
         {
-            animate.SetBool("isAttacking", true);
-            Timer += Time.deltaTime;
-            animate.SetFloat("timeSinceAttack", Timer);
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            Timer += Time.deltaTime;
             if (Timer > timeSinceAttack)
             {
+                animate.SetBool("isAttacking", true);
+                animate.SetBool("isIdle", true);
+                Instantiate(this.projectile, transform.position, Quaternion.identity);
                 Timer = 0.0f;
             }
+            animate.SetBool("isIdle", false);
+        }
+
+        deathTimer += Time.deltaTime;
+        if (deathTimer > timeTilDeath)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
