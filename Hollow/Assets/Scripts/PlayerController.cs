@@ -90,8 +90,9 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
-        {
-            currentHealth--;
+        {   
+            currentHealth -= 1 + timer.damageIncrease;
+            // Debug.Log("Damage taken: " + (int)(1.0 + timer.damageIncrease));
             if(currentHealth <= 0)
             {
                 currentHealth = 0;
