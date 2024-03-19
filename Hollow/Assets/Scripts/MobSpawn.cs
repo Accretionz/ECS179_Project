@@ -74,7 +74,7 @@ public class MobSpawn : MonoBehaviour
                 }
                 else
                 {
-                    Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
+                    Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
                 }
             }
             setRandomSpawnTime();
