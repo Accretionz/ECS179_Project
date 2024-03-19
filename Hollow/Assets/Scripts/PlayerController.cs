@@ -40,8 +40,6 @@ public class PlayerController : MonoBehaviour
         healthController = GameObject.Find("HealthBar").GetComponent<PlayerHealthController>();
         healthController.SetHealth(maxHealth);
         currentHealth = maxHealth;
-<<<<<<< HEAD
-=======
        
     }
 
@@ -78,7 +76,6 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = movementDirection * currentSpeed;
         
->>>>>>> d174192 (added basic default combat attack)
 
         // set up experience bar for player
         experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
@@ -129,23 +126,5 @@ public class PlayerController : MonoBehaviour
 
         // currentLevel++
         currentExperience = 0;
-    }
-
-    void Update()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        movementDirection = new Vector2(horizontalInput, verticalInput).normalized;
-
-        if (horizontalInput != 0f)
-        {
-            lastHorizontalInput = horizontalInput;
-        }
-
-        spriteRenderer.flipX = lastHorizontalInput < 0f;
-
-        rb.velocity = movementDirection * currentSpeed;
-        
-
     }
 }
