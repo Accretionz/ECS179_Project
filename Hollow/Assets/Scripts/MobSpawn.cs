@@ -6,7 +6,9 @@ using UnityEngine.AI;
 public class MobSpawn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject miniPrefab;
+    private GameObject meleeMob;
+    [SerializeField]
+    private GameObject rangedMob;
     [SerializeField]
     private float minSpawnTime;
     [SerializeField]
@@ -17,7 +19,7 @@ public class MobSpawn : MonoBehaviour
     private Camera managedCamera;
 
     private float timeUntilSpawn;
-
+    private float Timer;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class MobSpawn : MonoBehaviour
     
     void Update()
     {
+        Timer += Time.deltaTime;
         timeUntilSpawn -= Time.deltaTime;
         if (timeUntilSpawn <= 0)
         {
@@ -56,7 +59,7 @@ public class MobSpawn : MonoBehaviour
                 UnityEngine.AI.NavMesh.SamplePosition(spawnLocation, out hit, Mathf.Infinity, UnityEngine.AI.NavMesh.AllAreas);
                 spawnLocation = hit.position;
                 spawnLocation.z = 0;
-                Instantiate(this.miniPrefab, spawnLocation, Quaternion.identity);
+                Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
             }
             setRandomSpawnTime();
         }
