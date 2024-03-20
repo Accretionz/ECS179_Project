@@ -60,7 +60,7 @@ public class CrowController : MobController
 
     public override void Die()
     {
-        Debug.Log("Enemy died!");
+        // Debug.Log("Enemy died!");
         animator.SetBool("isDead", true);
         player.GetComponent<PlayerController>().ExperienceChange(100);
         Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
