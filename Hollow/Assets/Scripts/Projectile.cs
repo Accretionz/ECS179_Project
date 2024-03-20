@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
         t = transform;
         rigidBody = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Satyr");
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     void Start()
@@ -26,11 +27,6 @@ public class Projectile : MonoBehaviour
         float angle = Mathf.Atan2(enemyToPlayer.y, enemyToPlayer.x) * Mathf.Rad2Deg - 360;
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, q, 300);
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject enemy in enemies)
-        {
-            Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
-        }
     }
 
     // Update is called once per frame
