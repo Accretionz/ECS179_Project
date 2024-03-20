@@ -66,8 +66,9 @@ public class MobController : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemey died!");
-        animator.SetBool("isDead", true);
         Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+        animator.SetBool("isDead", true);
+        // Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
 
         // Destroy(gameObject);
     }   
