@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxSource;
 
     public static AudioManager instance;
+
     private Sound trackPlaying;
     private Sound trackFading;
     private Sound sfxPlaying;
@@ -53,39 +54,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        
-        
-        /*
-        foreach (Sound s in sounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-        }
-        */
-
-        foreach (var bgm in this.bgmTracks)
-        {
-            bgm.source = this.gameObject.AddComponent<AudioSource>();
-            bgm.source.clip = bgm.clip;
-            bgm.source.volume = bgm.volume;
-            bgm.source.pitch = bgm.pitch;
-            bgm.source.loop = bgm.loop;
-            bgm.source.outputAudioMixerGroup = this.bgmMixerGroup;
-        }
-
-        foreach (var sfx in this.sfxClips)
-        {
-            sfx.source = this.gameObject.AddComponent<AudioSource>();
-            sfx.source.clip = sfx.clip;
-            sfx.source.volume = sfx.volume;
-            sfx.source.pitch = sfx.pitch;
-            sfx.source.loop = sfx.loop;
-            sfx.source.outputAudioMixerGroup = this.sfxMixerGroup;
-        }
 
         // Play initial bgm in main scene
         //this.PlayBgmTrack("BGM1");
@@ -112,15 +80,11 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found");
             return;
         }
-
-        bgm.source.Play();
-
-        if (this.trackPlaying != null)
+        else
         {
-            this.trackPlaying.source.Stop();
+            bgmSource.clip = bgm.clip;
+            bgmSource.Play();
         }
-
-        this.trackPlaying = bgm;
     }
 
     // When use,
@@ -135,8 +99,11 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found");
             return;
         }
-
-        sfx.source.Play();
+        else
+        {
+            sfxSource.clip = sfx.clip;
+            sfxSource.Play();
+        }
     }
 
     public void StopSoundEffect(string name)
@@ -149,7 +116,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        sfx.source.Stop();
+        sfxSource.Stop();
     }
 
     /*

@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
+            AudioManager.instance.bgmSource.Stop();
             SceneManager.LoadScene("DeathScene");
         }
     }
