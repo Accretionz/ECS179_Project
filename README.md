@@ -88,6 +88,16 @@ Gameplay:
 ## Reason for Game:
 We were inspired by Vampire Survivor and The Binding of Isaac. We chose to make a roguelike game because the predictability and replayability of roguelike games never make players feel bored. The boundless levels and limitless weapon combinations ensure the entertainment never runs out. The longer the player survives, the harder the game gets, which makes players want to keep challenging.
 
+## Major Systems Compared to Other Games:
+The gameplay and systems of our game is closely related to Vampire Survivors and Survivor.io. In these games, the player controls their character on a large map(endless?) with the goal to survive as long as possible. Constant waves of monsters spawn and inflict damage either by direct contact or by projectiles. Player’s weapons attack automatically, dealing damage to monsters that come into contact. Defeated monsters drop experience which are used to level up. Leveling up allows the player to obtain stat boosts or weapon upgrades.
+In terms of aesthetics our game is related to….
+
+## Non-Core Gameplay and Features:
+- Maybe achievements for mobs killed and time survived.
+- Endless Mode 
+- Collectibles on map
+
+
 
 
 
