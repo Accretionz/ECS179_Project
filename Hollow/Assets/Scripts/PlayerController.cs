@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     private float currentSpeed;
     private float lastHorizontalInput;
+    private float elapsedTime;
+    private float lastHealing;
 
 
     void Awake()
@@ -81,6 +83,14 @@ public class PlayerController : MonoBehaviour
         experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
         experienceController.SetExperience(0);
         currentExperience = 0;
+
+        // Timer system
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime - lastHealing >= 15.0)
+        {
+            playerHealing();
+            lastHealing = elapsedTime;
+        }
     }
 
     // if enemy touches player, lose heart
@@ -105,6 +115,12 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("DeathScene");
         }
+    }
+
+    public void playerHealing()
+    {
+        currentHealth += 1;
+        healthController.SetHealth(currentHealth);
     }
 
     public void ExperienceChange(int experience)
