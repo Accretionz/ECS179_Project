@@ -13,24 +13,8 @@ public class MobController : MonoBehaviour
     }
     public virtual void Die()
     {
-<<<<<<< HEAD
-        currentHealth -= damage;
-        animator.SetTrigger("Damaged");
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+       
     }
-
-    void Die()
-    {
-        Debug.Log("Enemey died!");
-        animator.SetBool("isDead", true);
-        player.GetComponent<PlayerController>().ExperienceChange(100);
-        Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
-
-        // Destroy(gameObject);
-    }   
 
     private void rotate()
     {
@@ -58,7 +42,5 @@ public class MobController : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
         }*/
-=======
->>>>>>> origin/master
     }
 }

@@ -81,8 +81,6 @@ public class PlayerController : MonoBehaviour
         // spriteRenderer.flipX = lastHorizontalInput < 0f;
 
         rb.velocity = movementDirection * currentSpeed;
-<<<<<<< HEAD
-=======
         
 
         // set up experience bar for player
@@ -97,7 +95,6 @@ public class PlayerController : MonoBehaviour
             playerHealing();
             lastHealing = elapsedTime;
         }
->>>>>>> origin/master
     }
 
     // if enemy touches player, lose heart
