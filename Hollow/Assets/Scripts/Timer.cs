@@ -28,6 +28,6 @@ public class timer : MonoBehaviour
             damageIncrease += 1;
             lastDamageIncreaseTime = elapsedTime;
         }
-        Debug.Log("Damage: " + damageIncrease);
+        //Debug.Log("Damage: " + damageIncrease);
     }
 }

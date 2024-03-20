@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BatController : MonoBehaviour
+public class BatController : MobController
 {
     [SerializeField]
     private float speed;
@@ -71,5 +71,24 @@ public class BatController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        //animator.SetTrigger("Damaged");
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public override void Die()
+    {
+        Debug.Log("Enemy died!");
+        //animator.SetBool("isDead", true);
+        Destroy(gameObject);
+
+        // Destroy(gameObject);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CrowController : MonoBehaviour
+public class CrowController : MobController
 {
     [SerializeField]
     private float speed;
@@ -11,16 +11,11 @@ public class CrowController : MonoBehaviour
     private float rotationSpeed;
     [SerializeField]
     private NavMeshAgent agent;
-
-    [SerializeField]
-    public int maxHealth = 50;
-    int currentHealth;
+    
     private Rigidbody2D rigidBody;
     private GameObject player;
     private float timeTilDeath = 15.0f;
     private float Timer = 0.0f;
-
-    private Animator animator;
 
     void Start()
     {
@@ -53,7 +48,7 @@ public class CrowController : MonoBehaviour
         //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         currentHealth -= damage;
         animator.SetTrigger("Damaged");
@@ -63,7 +58,7 @@ public class CrowController : MonoBehaviour
         }
     }
 
-    void Die()
+    public override void Die()
     {
         Debug.Log("Enemy died!");
         animator.SetBool("isDead", true);
