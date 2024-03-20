@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 445930139553803664}
   - component: {fileID: 6082842411930430909}
   - component: {fileID: 533551581290455303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BatProjectile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 742558155354981535}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f8eaf66cc927764a9c0572792fbf874, type: 2}
+  m_Controller: {fileID: 9100000, guid: f5adf2cca13e8fb4f89a49d516607933, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

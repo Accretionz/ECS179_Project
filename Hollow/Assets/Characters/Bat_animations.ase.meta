@@ -141,8 +141,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 441}
   - name: Bat_animations_Frame_1
     originalName: 
-    pivot: {x: 0.625, y: -0.41025642}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -201,8 +201,8 @@ ScriptedImporter:
     uvTransform: {x: 105, y: 33}
   - name: Bat_animations_Frame_4
     originalName: 
-    pivot: {x: 0.625, y: -0.41025642}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,8 +221,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 378}
   - name: Bat_animations_Frame_5
     originalName: 
-    pivot: {x: 0.9375, y: -0.516129}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -241,8 +241,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 213}
   - name: Bat_animations_Frame_6
     originalName: 
-    pivot: {x: 1.0285715, y: -0.7619048}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -261,8 +261,8 @@ ScriptedImporter:
     uvTransform: {x: 105, y: 4}
   - name: Bat_animations_Frame_7
     originalName: 
-    pivot: {x: 1.1470588, y: -1.2307693}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -281,8 +281,8 @@ ScriptedImporter:
     uvTransform: {x: 197, y: 41}
   - name: Bat_animations_Frame_8
     originalName: 
-    pivot: {x: 1.1818182, y: -1.2307693}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -301,8 +301,8 @@ ScriptedImporter:
     uvTransform: {x: 197, y: 62}
   - name: Bat_animations_Frame_9
     originalName: 
-    pivot: {x: 0.625, y: -0.41025642}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -321,8 +321,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 425}
   - name: Bat_animations_Frame_10
     originalName: 
-    pivot: {x: 0.8333334, y: -0.36585364}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -341,8 +341,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 99}
   - name: Bat_animations_Frame_11
     originalName: 
-    pivot: {x: 1.0555557, y: -0.36585364}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -361,8 +361,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 148}
   - name: Bat_animations_Frame_12
     originalName: 
-    pivot: {x: 1.2777778, y: -0.36585364}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -381,8 +381,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 197}
   - name: Bat_animations_Frame_13
     originalName: 
-    pivot: {x: 1.7647059, y: -0.47368422}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -481,8 +481,8 @@ ScriptedImporter:
     uvTransform: {x: 105, y: 81}
   - name: Bat_animations_Frame_19
     originalName: 
-    pivot: {x: 0.47058824, y: -0.42105263}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -541,8 +541,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 4}
   - name: Bat_animations_Frame_22
     originalName: 
-    pivot: {x: 0.36363634, y: -0.41025642}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -641,8 +641,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 343}
   - name: Bat_animations_Frame_27
     originalName: 
-    pivot: {x: 0.54999995, y: -0.425}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -761,8 +761,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 246}
   - name: Bat_animations_Frame_33
     originalName: 
-    pivot: {x: 0.5263158, y: -0.3478261}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -781,8 +781,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 359}
   - name: Bat_animations_Frame_34
     originalName: 
-    pivot: {x: 0.5263158, y: -0.30769232}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -801,8 +801,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 252}
   - name: Bat_animations_Frame_35
     originalName: 
-    pivot: {x: 0.5263158, y: -0.27586207}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -821,8 +821,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 98}
   - name: Bat_animations_Frame_36
     originalName: 
-    pivot: {x: 0.5238095, y: -0.23529412}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -841,8 +841,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 369}
   - name: Bat_animations_Frame_37
     originalName: 
-    pivot: {x: 0.5238095, y: -0.20512821}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -861,8 +861,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 197}
   - name: Bat_animations_Frame_38
     originalName: 
-    pivot: {x: 0.5, y: -0.18181819}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -881,8 +881,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 101}
   - name: Bat_animations_Frame_39
     originalName: 
-    pivot: {x: 0.49999997, y: -0.17977528}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -901,8 +901,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Bat_animations_Frame_40
     originalName: 
-    pivot: {x: 0.5263158, y: -0.34615386}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -921,8 +921,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 283}
   - name: Bat_animations_Frame_41
     originalName: 
-    pivot: {x: 0.5263158, y: -0.6774193}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -941,8 +941,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 445}
   - name: Bat_animations_Frame_42
     originalName: 
-    pivot: {x: 0.50000006, y: -1.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -961,8 +961,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 413}
   - name: Bat_animations_Frame_43
     originalName: 
-    pivot: {x: 0.50000006, y: -2.6206896}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

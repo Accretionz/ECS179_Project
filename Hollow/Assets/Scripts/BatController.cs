@@ -10,8 +10,6 @@ public class BatController : MobController
     [SerializeField]
     private NavMeshAgent agent;
     [SerializeField]
-    private Animator animate;
-    [SerializeField]
     private float maxDistance;
     [SerializeField]
     private float timeSinceAttack;
@@ -20,9 +18,6 @@ public class BatController : MobController
 
     private GameObject player;
     private float Timer = 5.0f;
-    private int health = 1;
-    private float timeTilDeath = 15.0f;
-    private float deathTimer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +25,8 @@ public class BatController : MobController
         player = GameObject.Find("Satyr");
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -48,7 +45,7 @@ public class BatController : MobController
         }
         if (Vector2.Distance(player.transform.position, transform.position) >= maxDistance)
         {
-            animate.SetBool("isAttacking", false);
+            animator.SetBool("isAttacking", false);
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             this.agent.SetDestination(player.transform.position);
         }
@@ -58,25 +55,19 @@ public class BatController : MobController
             Timer += Time.deltaTime;
             if (Timer > timeSinceAttack)
             {
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isIdle", true);
+                animator.SetBool("isAttacking", true);
+                animator.SetBool("isIdle", true);
                 Instantiate(this.projectile, transform.position, Quaternion.identity);
                 Timer = 0.0f;
             }
-            animate.SetBool("isIdle", false);
-        }
-
-        deathTimer += Time.deltaTime;
-        if (deathTimer > timeTilDeath)
-        {
-            Destroy(this.gameObject);
+            animator.SetBool("isIdle", false);
         }
     }
 
     public override void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        //animator.SetTrigger("Damaged");
+        animator.SetTrigger("Damaged");
         if (currentHealth <= 0)
         {
             Die();
@@ -86,8 +77,8 @@ public class BatController : MobController
     public override void Die()
     {
         Debug.Log("Enemy died!");
-        //animator.SetBool("isDead", true);
-        Destroy(gameObject);
+        animator.SetBool("isDead", true);
+        Destroy(gameObject, 0.52f);
 
         // Destroy(gameObject);
     }
