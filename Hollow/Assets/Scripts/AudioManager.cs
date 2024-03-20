@@ -88,15 +88,15 @@ public class AudioManager : MonoBehaviour
         }
 
         // Play initial bgm in main scene
-        this.PlayBgmTrack("BGM1");
+        //this.PlayBgmTrack("BGM1");
     }
 
-    /*
+    
     private void Start()
     {
         PlayBgmTrack("BGM1");
     }
-    */
+    
 
     // When use,
     // FindObjectOfType<AudioManager>().PlayBgmTrack("bgm1");
