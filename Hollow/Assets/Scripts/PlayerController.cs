@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
         healthController = GameObject.Find("HealthBar").GetComponent<PlayerHealthController>();
         healthController.SetHealth(maxHealth);
         currentHealth = maxHealth;
+        // set up experience bar for player
+        experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
+        experienceController.SetExperience(0);
+        currentExperience = 0;
        
     }
 
@@ -75,12 +79,6 @@ public class PlayerController : MonoBehaviour
         // spriteRenderer.flipX = lastHorizontalInput < 0f;
 
         rb.velocity = movementDirection * currentSpeed;
-        
-
-        // set up experience bar for player
-        experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
-        experienceController.SetExperience(0);
-        currentExperience = 0;
     }
 
     // if enemy touches player, lose heart
@@ -110,6 +108,7 @@ public class PlayerController : MonoBehaviour
     public void ExperienceChange(int experience)
     {
         currentExperience += experience;
+        Debug.Log("current Experience: " + currentExperience);
         experienceController.SetExperience(currentExperience);
         if(currentExperience >= maxExperience)
         {
@@ -122,9 +121,10 @@ public class PlayerController : MonoBehaviour
     {
         // each higher level gives player one more heart
         healthController.AddHeart();
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
 
         // currentLevel++
+        experienceController.SetExperience(0);
         currentExperience = 0;
     }
 }

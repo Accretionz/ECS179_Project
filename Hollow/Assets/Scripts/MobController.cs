@@ -67,6 +67,7 @@ public class MobController : MonoBehaviour
     {
         Debug.Log("Enemey died!");
         animator.SetBool("isDead", true);
+        player.GetComponent<PlayerController>().ExperienceChange(100);
         Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
 
         // Destroy(gameObject);
