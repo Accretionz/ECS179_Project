@@ -59,11 +59,12 @@ public class AudioManager : MonoBehaviour
         //this.PlayBgmTrack("BGM1");
     }
 
-    
+    /*
     private void Start()
     {
         PlayBgmTrack("BGM1");
     }
+    */
     
 
     // When use,

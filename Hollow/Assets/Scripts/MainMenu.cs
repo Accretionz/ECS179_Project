@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");
+        AudioManager.instance.PlayBgmTrack("BGM1");
     }
 
     public void QuitGame()
