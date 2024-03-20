@@ -7,13 +7,13 @@ public class timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     float elapsedTime;
-    float lastDamageIncreaseTime;
+    float lastDamageIncreaseTime = 0;
     public static int damageIncrease = 0;
 
-    void Start()
-    {
-        lastDamageIncreaseTime = 0;
-    }
+    // void Awake()
+    // {
+    //     lastDamageIncreaseTime = 0;
+    // }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +28,6 @@ public class timer : MonoBehaviour
             damageIncrease += 1;
             lastDamageIncreaseTime = elapsedTime;
         }
-        Debug.Log("Damage: " + damageIncrease);
+        // Debug.Log("Damage: " + damageIncrease);
     }
 }
