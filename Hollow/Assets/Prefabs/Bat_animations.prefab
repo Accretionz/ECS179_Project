@@ -85,11 +85,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4140517975306625519}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 8bea8bfdcd0a13548a545b8e56a9649c, type: 3}
---- !u!95 &1155400416653068096 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 8bea8bfdcd0a13548a545b8e56a9649c, type: 3}
-  m_PrefabInstance: {fileID: 5250518240496264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6965617276580224480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 8bea8bfdcd0a13548a545b8e56a9649c, type: 3}
@@ -154,7 +149,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0050000027, y: 0.36}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!114 &2674189780485126642
@@ -174,7 +169,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   speed: 1
   agent: {fileID: 4140517975306625519}
-  animate: {fileID: 1155400416653068096}
   maxDistance: 2
   timeSinceAttack: 5
   projectile: {fileID: 742558155354981535, guid: fad98e127b411b3429138ca58620d757, type: 3}

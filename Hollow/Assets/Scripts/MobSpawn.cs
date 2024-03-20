@@ -62,7 +62,7 @@ public class MobSpawn : MonoBehaviour
                 spawnLocation.z = 0;
                 if (Timer >= timeUntilRangedSpawn)
                 {
-                    int randMob = Random.Range(0, 3);
+                    int randMob = Random.Range(0, 4);
                     if (randMob == 0)
                     {
                         Instantiate(this.rangedMob, spawnLocation, Quaternion.identity);
