@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
+            AudioManager.instance.PlaySoundEffects("PlayerDead");
             AudioManager.instance.bgmSource.Stop();
             SceneManager.LoadScene("DeathScene");
         }
@@ -142,6 +143,7 @@ public class PlayerController : MonoBehaviour
         experienceController.SetExperience(currentExperience);
         if(currentExperience >= maxExperience)
         {
+            AudioManager.instance.PlaySoundEffects("GainXp");
             LevelUp();
         }
         

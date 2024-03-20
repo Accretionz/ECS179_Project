@@ -37,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
         attackPointAnimator.SetTrigger("Attack");
         // Detect enemies in range of attack
 
+        AudioManager.instance.PlaySoundEffects("PlayerAttack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRange, enemyLayers);
         // Damage them
 
