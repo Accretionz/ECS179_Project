@@ -42,4 +42,55 @@ Player:
 - Has a set amount of health at the start that increases depending on stat
 - An experience bar to keep track of the leveling system
 
+Monster:
+- Varying monster types spawn depending on the map
+- Different health depending on the type of monster which drops experience on death
+- Moves towards the player and does damage as it interacts with the player
+- Some monster can have skills that shoot projectiles
+- Boss Monster:
+  - Has a lot more health and does more damage
+  - Slower and just roams around the map
+  - Drops a new improved weapon that the player can pick up and use
+
+Gameplay:
+- Player spawns in the middle of the map
+- Timer will start to count and initial monsters will start to spawn
+- As time progresses, more monster will spawn and increases in strength
+- Player goal is to survive to a given time limit or for as long as they can
+- Player slay enemies that allow them to increase in level to increase their strength
+- If player dies then a game over sign will display
+- If player survives till the given time then a good job sign will display
+
+## Implementation Plan for Core Gameplay System
+- Classes
+  - PlayerController
+  - EnemyController
+  - HealthBarController
+  - ExperienceConroller
+  - UIManager
+  - AudioManager
+- ScriptableObjects
+  - Weapons 
+  - Enemies
+- Prefabs
+  - Dropped experience
+  - Attack effect
+- Audio
+  - Main background music
+  - Sound FXs
+    - Attack enemies
+    - Spawn experience
+    - Level up
+- Scene hierarchy
+  - Main menu
+  - Main room
+ 
+## Reason for Game:
+We were inspired by Vampire Survivor and The Binding of Isaac. We chose to make a roguelike game because the predictability and replayability of roguelike games never make players feel bored. The boundless levels and limitless weapon combinations ensure the entertainment never runs out. The longer the player survives, the harder the game gets, which makes players want to keep challenging.
+
+
+
+
+
+
 
