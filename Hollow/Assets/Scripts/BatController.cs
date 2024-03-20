@@ -21,8 +21,6 @@ public class BatController : MobController
     private GameObject player;
     private float Timer = 5.0f;
     private int health = 1;
-    private float timeTilDeath = 15.0f;
-    private float deathTimer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -64,12 +62,6 @@ public class BatController : MobController
                 Timer = 0.0f;
             }
             animate.SetBool("isIdle", false);
-        }
-
-        deathTimer += Time.deltaTime;
-        if (deathTimer > timeTilDeath)
-        {
-            Destroy(this.gameObject);
         }
     }
 

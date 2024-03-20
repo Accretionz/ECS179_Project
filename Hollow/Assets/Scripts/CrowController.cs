@@ -40,11 +40,6 @@ public class CrowController : MobController
 
         }
         this.agent.SetDestination(player.transform.position);
-        Timer += Time.deltaTime;
-        if (Timer > timeTilDeath)
-        {
-            Destroy(this.gameObject);
-        }
         //this.agent.SetDestination(new Vector3(Random.Range(-5f, 5f), this.gameObject.transform.position.y, 0));
     }
 

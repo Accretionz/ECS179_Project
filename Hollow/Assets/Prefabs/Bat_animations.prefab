@@ -176,7 +176,7 @@ MonoBehaviour:
   agent: {fileID: 4140517975306625519}
   animate: {fileID: 1155400416653068096}
   maxDistance: 2
-  timeSinceAttack: 2
+  timeSinceAttack: 5
   projectile: {fileID: 742558155354981535, guid: fad98e127b411b3429138ca58620d757, type: 3}
 --- !u!195 &4140517975306625519
 NavMeshAgent:
