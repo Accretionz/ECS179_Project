@@ -1,0 +1,1796 @@
+fileFormatVersion: 2
+guid: 8bea8bfdcd0a13548a545b8e56a9649c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638462961600455827
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Bat_animations_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 441
+      width: 17
+      height: 40
+    spriteID: f51767cdb8689204ebf6a613df22ca69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 441}
+  - name: Bat_animations_Frame_1
+    originalName: 
+    pivot: {x: 0.625, y: -0.41025642}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 284
+      width: 16
+      height: 39
+    spriteID: e31ca2cfdcd918f4395bf4424eb7c3c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 284}
+  - name: Bat_animations_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 331
+      width: 16
+      height: 39
+    spriteID: fe8d12fbdadb26941beea93f9ae20e10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 331}
+  - name: Bat_animations_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 33
+      width: 17
+      height: 40
+    spriteID: 3f8eb76a4f9f31d41b38facfc5197200
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 33}
+  - name: Bat_animations_Frame_4
+    originalName: 
+    pivot: {x: 0.625, y: -0.41025642}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 378
+      width: 16
+      height: 39
+    spriteID: 3ac89ca6358dd6348b99c397be98a79e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 378}
+  - name: Bat_animations_Frame_5
+    originalName: 
+    pivot: {x: 0.9375, y: -0.516129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 213
+      width: 32
+      height: 31
+    spriteID: c2e6f2345c3387a4ea4b2c9f5a195206
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 213}
+  - name: Bat_animations_Frame_6
+    originalName: 
+    pivot: {x: 1.0285715, y: -0.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 4
+      width: 35
+      height: 21
+    spriteID: e8870a95002d63943a3e269abea3009c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 4}
+  - name: Bat_animations_Frame_7
+    originalName: 
+    pivot: {x: 1.1470588, y: -1.2307693}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 41
+      width: 34
+      height: 13
+    spriteID: 2233a525316d31042b6b4d82cdcaf262
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 41}
+  - name: Bat_animations_Frame_8
+    originalName: 
+    pivot: {x: 1.1818182, y: -1.2307693}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 62
+      width: 33
+      height: 13
+    spriteID: d39ecddd54c7e664a91861794f506a12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 62}
+  - name: Bat_animations_Frame_9
+    originalName: 
+    pivot: {x: 0.625, y: -0.41025642}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 425
+      width: 16
+      height: 39
+    spriteID: a84a6007babe7504180e251d06d9d694
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 425}
+  - name: Bat_animations_Frame_10
+    originalName: 
+    pivot: {x: 0.8333334, y: -0.36585364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 99
+      width: 18
+      height: 41
+    spriteID: 6cb2d65254ba0254988212da56ab2b66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 99}
+  - name: Bat_animations_Frame_11
+    originalName: 
+    pivot: {x: 1.0555557, y: -0.36585364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 148
+      width: 18
+      height: 41
+    spriteID: fd93d0e3aa8c6634cac66ddf75bba1ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 148}
+  - name: Bat_animations_Frame_12
+    originalName: 
+    pivot: {x: 1.2777778, y: -0.36585364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 197
+      width: 18
+      height: 41
+    spriteID: 0e62bd646205ae1479afc1362dbcb523
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 197}
+  - name: Bat_animations_Frame_13
+    originalName: 
+    pivot: {x: 1.7647059, y: -0.47368422}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 192
+      width: 17
+      height: 38
+    spriteID: 5c0748b8264e00e42a399685b98fc4ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 192}
+  - name: Bat_animations_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 4
+      width: 17
+      height: 39
+    spriteID: d1505225b8218224ca23134443ad2341
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 4}
+  - name: Bat_animations_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 312
+      width: 25
+      height: 39
+    spriteID: 1c15c14ff123509468d3880d6c6f71e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 312}
+  - name: Bat_animations_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 469
+      width: 22
+      height: 39
+    spriteID: f566f1f934f434840a74a84d31e66072
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 469}
+  - name: Bat_animations_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 81
+      width: 17
+      height: 40
+    spriteID: b8b7e247c2d838e489aaa521cc468476
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 81}
+  - name: Bat_animations_Frame_19
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.42105263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 238
+      width: 17
+      height: 38
+    spriteID: 7cb8c1d5f4b629b46ae292117c17cd59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 238}
+  - name: Bat_animations_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 51
+      width: 30
+      height: 39
+    spriteID: e58949a610c95164f8dd99454da7a2a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 51}
+  - name: Bat_animations_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 4
+      width: 33
+      height: 39
+    spriteID: 3dff71cc1a2729947b5411a3f1fb0764
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 4}
+  - name: Bat_animations_Frame_22
+    originalName: 
+    pivot: {x: 0.36363634, y: -0.41025642}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 4
+      width: 22
+      height: 39
+    spriteID: 26cff2a67376428439fa95c81f766cdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 4}
+  - name: Bat_animations_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 296
+      width: 18
+      height: 39
+    spriteID: 719ab502990f31b4fa86a2ac4147b87e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 296}
+  - name: Bat_animations_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 129
+      width: 17
+      height: 40
+    spriteID: c44f6a434aa029c478494464f7f00577
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 129}
+  - name: Bat_animations_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 4
+      width: 16
+      height: 39
+    spriteID: bc2d2e50bd9fc5a4289b16ee578ed32d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 4}
+  - name: Bat_animations_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 343
+      width: 17
+      height: 41
+    spriteID: b3e240114e1ae624bb9bac955af49680
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 343}
+  - name: Bat_animations_Frame_27
+    originalName: 
+    pivot: {x: 0.54999995, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 51
+      width: 20
+      height: 40
+    spriteID: 3383e4a2545891042b1f8bd128e4cdc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 51}
+  - name: Bat_animations_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 164
+      width: 25
+      height: 41
+    spriteID: 6964d8f527f0ec944be95afffe90e43a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 164}
+  - name: Bat_animations_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 51
+      width: 17
+      height: 39
+    spriteID: 611349ae011c0e24689f68b918c1e9a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 51}
+  - name: Bat_animations_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 177
+      width: 17
+      height: 40
+    spriteID: df82e248c2e1b074191c4fccd6969542
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 177}
+  - name: Bat_animations_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 225
+      width: 17
+      height: 40
+    spriteID: adb373ff6e152584d8a20ef804ef3353
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 225}
+  - name: Bat_animations_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 246
+      width: 17
+      height: 42
+    spriteID: ad85971e996913046be2fc25c90e0406
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 246}
+  - name: Bat_animations_Frame_33
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.3478261}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 359
+      width: 19
+      height: 46
+    spriteID: 7ef42400a99f9504bb0258b00b7576dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 359}
+  - name: Bat_animations_Frame_34
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.30769232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 252
+      width: 19
+      height: 52
+    spriteID: f81563f1d331f304d86b6c2545f676bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 252}
+  - name: Bat_animations_Frame_35
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.27586207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 98
+      width: 19
+      height: 58
+    spriteID: f165a80a5f7f6ec4ba62da8990df110c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 98}
+  - name: Bat_animations_Frame_36
+    originalName: 
+    pivot: {x: 0.5238095, y: -0.23529412}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 369
+      width: 21
+      height: 68
+    spriteID: 27cd9e10b132c7c418e1d3d8fd98d20b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 369}
+  - name: Bat_animations_Frame_37
+    originalName: 
+    pivot: {x: 0.5238095, y: -0.20512821}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 197
+      width: 21
+      height: 78
+    spriteID: d52a99cf9c855f744993315d7b21cf3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 197}
+  - name: Bat_animations_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 101
+      width: 20
+      height: 88
+    spriteID: 488fa99162271bb469f9fb4f1935bc00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 101}
+  - name: Bat_animations_Frame_39
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.17977528}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 22
+      height: 89
+    spriteID: 23e25ec79c5047446872bd74864dc216
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Bat_animations_Frame_40
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.34615386}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 283
+      width: 19
+      height: 78
+    spriteID: 7bb97dc63905d294a8e66efb82277404
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 283}
+  - name: Bat_animations_Frame_41
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.6774193}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 445
+      width: 19
+      height: 62
+    spriteID: 42769bda8d12810468eb5207852ce278
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 445}
+  - name: Bat_animations_Frame_42
+    originalName: 
+    pivot: {x: 0.50000006, y: -1.1666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 413
+      width: 18
+      height: 48
+    spriteID: 41c3ace6dbaf5e945a428666bcaa50ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 413}
+  - name: Bat_animations_Frame_43
+    originalName: 
+    pivot: {x: 0.50000006, y: -2.6206896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 4
+      width: 18
+      height: 29
+    spriteID: 488c32d4e174cb64c80e77d70f712211
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 4}
+  - name: Bat_animations_Frame_44
+    originalName: 
+    pivot: {x: 0.50000006, y: -5.1764708}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 489
+      width: 18
+      height: 17
+    spriteID: 568c55e32ceed664d88515c36b8a5d5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 489}
+  - name: Bat_animations_Frame_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 273
+      width: 17
+      height: 40
+    spriteID: 45170f764536fd343a3bde00e48a8ece
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 273}
+  - name: Bat_animations_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 321
+      width: 17
+      height: 40
+    spriteID: 11a0879846ec705438251cd9af91d4a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 321}
+  - name: Bat_animations_Frame_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 392
+      width: 17
+      height: 41
+    spriteID: d05cfee080df1144aa28d7cc3b096471
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 392}
+  - name: Bat_animations_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 369
+      width: 17
+      height: 40
+    spriteID: 82b22362380ddba47babafd97ccdcc49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 369}
+  - name: Bat_animations_Frame_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 98
+      width: 17
+      height: 39
+    spriteID: 90b0292ef2c65924aa1363ba5ad8332f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 98}
+  - name: Bat_animations_Frame_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 417
+      width: 17
+      height: 40
+    spriteID: 6ca1d745cc9fef44287ee5398718aaff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 417}
+  - name: Bat_animations_Frame_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 145
+      width: 17
+      height: 39
+    spriteID: 5c57b0e595ee577438949258b7956d7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 145}
+  - name: Bat_animations_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 465
+      width: 17
+      height: 40
+    spriteID: 55ff8648ec8c2504c97759f41c1cc94d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 465}
+  - name: Bat_animations_Frame_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 83
+      width: 27
+      height: 2
+    spriteID: 72bdd216ad314e746acbcc74d899d61e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 83}
+  - name: Bat_animations_Frame_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 239
+      y: 41
+      width: 10
+      height: 2
+    spriteID: ac09dce7bc20f504c85388a4d8bbfacc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 239, y: 41}
+  - name: Bat_animations_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 22
+      width: 29
+      height: 2
+    spriteID: bcc85797c2b839544a3132e7468b0193
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 22}
+  - name: Bat_animations_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 4
+      width: 28
+      height: 10
+    spriteID: 9b5b206c3083aa243aa94fdb4fedfe67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 4}
+  - name: Bat_animations_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 472
+      width: 9
+      height: 16
+    spriteID: 168892a18434a8241800a50143a1d615
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 472}
+  - name: Bat_animations_Frame_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 239
+      y: 51
+      width: 9
+      height: 2
+    spriteID: b877d26257afb014f823813bb3581dbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 239, y: 51}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1368779159
+    name: Bat_animations
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Bat_animations_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: f51767cdb8689204ebf6a613df22ca69
+    - name: Bat_animations_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 30
+        y: 16
+        width: 16
+        height: 39
+      spriteId: e31ca2cfdcd918f4395bf4424eb7c3c8
+    - name: Bat_animations_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 30
+        y: 16
+        width: 16
+        height: 39
+      spriteId: fe8d12fbdadb26941beea93f9ae20e10
+    - name: Bat_animations_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 3f8eb76a4f9f31d41b38facfc5197200
+    - name: Bat_animations_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 30
+        y: 16
+        width: 16
+        height: 39
+      spriteId: 3ac89ca6358dd6348b99c397be98a79e
+    - name: Bat_animations_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 10
+        y: 16
+        width: 32
+        height: 31
+      spriteId: c2e6f2345c3387a4ea4b2c9f5a195206
+    - name: Bat_animations_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 4
+        y: 16
+        width: 35
+        height: 21
+      spriteId: e8870a95002d63943a3e269abea3009c
+    - name: Bat_animations_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 1
+        y: 16
+        width: 34
+        height: 13
+      spriteId: 2233a525316d31042b6b4d82cdcaf262
+    - name: Bat_animations_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 1
+        y: 16
+        width: 33
+        height: 13
+      spriteId: d39ecddd54c7e664a91861794f506a12
+    - name: Bat_animations_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 30
+        y: 16
+        width: 16
+        height: 39
+      spriteId: a84a6007babe7504180e251d06d9d694
+    - name: Bat_animations_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 25
+        y: 15
+        width: 18
+        height: 41
+      spriteId: 6cb2d65254ba0254988212da56ab2b66
+    - name: Bat_animations_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 21
+        y: 15
+        width: 18
+        height: 41
+      spriteId: fd93d0e3aa8c6634cac66ddf75bba1ed
+    - name: Bat_animations_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 17
+        y: 15
+        width: 18
+        height: 41
+      spriteId: 0e62bd646205ae1479afc1362dbcb523
+    - name: Bat_animations_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 10
+        y: 18
+        width: 17
+        height: 38
+      spriteId: 5c0748b8264e00e42a399685b98fc4ab
+    - name: Bat_animations_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 39
+      spriteId: d1505225b8218224ca23134443ad2341
+    - name: Bat_animations_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 32
+        y: 16
+        width: 25
+        height: 39
+      spriteId: 1c15c14ff123509468d3880d6c6f71e6
+    - name: Bat_animations_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 32
+        y: 16
+        width: 22
+        height: 39
+      spriteId: f566f1f934f434840a74a84d31e66072
+    - name: Bat_animations_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: b8b7e247c2d838e489aaa521cc468476
+    - name: Bat_animations_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 38
+      spriteId: 7cb8c1d5f4b629b46ae292117c17cd59
+    - name: Bat_animations_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 32
+        y: 16
+        width: 30
+        height: 39
+      spriteId: e58949a610c95164f8dd99454da7a2a2
+    - name: Bat_animations_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 32
+        y: 16
+        width: 33
+        height: 39
+      spriteId: 3dff71cc1a2729947b5411a3f1fb0764
+    - name: Bat_animations_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 32
+        y: 16
+        width: 22
+        height: 39
+      spriteId: 26cff2a67376428439fa95c81f766cdf
+    - name: Bat_animations_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 32
+        y: 16
+        width: 18
+        height: 39
+      spriteId: 719ab502990f31b4fa86a2ac4147b87e
+    - name: Bat_animations_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: c44f6a434aa029c478494464f7f00577
+    - name: Bat_animations_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 32
+        y: 16
+        width: 16
+        height: 39
+      spriteId: bc2d2e50bd9fc5a4289b16ee578ed32d
+    - name: Bat_animations_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 41
+      spriteId: b3e240114e1ae624bb9bac955af49680
+    - name: Bat_animations_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 29
+        y: 17
+        width: 20
+        height: 40
+      spriteId: 3383e4a2545891042b1f8bd128e4cdc2
+    - name: Bat_animations_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 27
+        y: 17
+        width: 25
+        height: 41
+      spriteId: 6964d8f527f0ec944be95afffe90e43a
+    - name: Bat_animations_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 39
+      spriteId: 611349ae011c0e24689f68b918c1e9a7
+    - name: Bat_animations_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: df82e248c2e1b074191c4fccd6969542
+    - name: Bat_animations_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: adb373ff6e152584d8a20ef804ef3353
+    - name: Bat_animations_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 42
+      spriteId: ad85971e996913046be2fc25c90e0406
+    - name: Bat_animations_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 30
+        y: 16
+        width: 19
+        height: 46
+      spriteId: 7ef42400a99f9504bb0258b00b7576dc
+    - name: Bat_animations_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 30
+        y: 16
+        width: 19
+        height: 52
+      spriteId: f81563f1d331f304d86b6c2545f676bd
+    - name: Bat_animations_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 30
+        y: 16
+        width: 19
+        height: 58
+      spriteId: f165a80a5f7f6ec4ba62da8990df110c
+    - name: Bat_animations_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 29
+        y: 16
+        width: 21
+        height: 68
+      spriteId: 27cd9e10b132c7c418e1d3d8fd98d20b
+    - name: Bat_animations_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 29
+        y: 16
+        width: 21
+        height: 78
+      spriteId: d52a99cf9c855f744993315d7b21cf3f
+    - name: Bat_animations_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 30
+        y: 16
+        width: 20
+        height: 88
+      spriteId: 488fa99162271bb469f9fb4f1935bc00
+    - name: Bat_animations_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 29
+        y: 16
+        width: 22
+        height: 89
+      spriteId: 23e25ec79c5047446872bd74864dc216
+    - name: Bat_animations_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 30
+        y: 27
+        width: 19
+        height: 78
+      spriteId: 7bb97dc63905d294a8e66efb82277404
+    - name: Bat_animations_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 30
+        y: 42
+        width: 19
+        height: 62
+      spriteId: 42769bda8d12810468eb5207852ce278
+    - name: Bat_animations_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 31
+        y: 56
+        width: 18
+        height: 48
+      spriteId: 41c3ace6dbaf5e945a428666bcaa50ee
+    - name: Bat_animations_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 31
+        y: 76
+        width: 18
+        height: 29
+      spriteId: 488c32d4e174cb64c80e77d70f712211
+    - name: Bat_animations_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 31
+        y: 88
+        width: 18
+        height: 17
+      spriteId: 568c55e32ceed664d88515c36b8a5d5d
+    - name: Bat_animations_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 45170f764536fd343a3bde00e48a8ece
+    - name: Bat_animations_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 11a0879846ec705438251cd9af91d4a6
+    - name: Bat_animations_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 41
+      spriteId: d05cfee080df1144aa28d7cc3b096471
+    - name: Bat_animations_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 31
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 82b22362380ddba47babafd97ccdcc49
+    - name: Bat_animations_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 39
+      spriteId: 90b0292ef2c65924aa1363ba5ad8332f
+    - name: Bat_animations_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 6ca1d745cc9fef44287ee5398718aaff
+    - name: Bat_animations_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 39
+      spriteId: 5c57b0e595ee577438949258b7956d7c
+    - name: Bat_animations_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 32
+        y: 16
+        width: 17
+        height: 40
+      spriteId: 55ff8648ec8c2504c97759f41c1cc94d
+    - name: Bat_animations_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 28
+        y: 32
+        width: 27
+        height: 2
+      spriteId: 72bdd216ad314e746acbcc74d899d61e
+    - name: Bat_animations_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 45
+        y: 32
+        width: 10
+        height: 2
+      spriteId: ac09dce7bc20f504c85388a4d8bbfacc
+    - name: Bat_animations_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 0
+        y: 32
+        width: 29
+        height: 2
+      spriteId: bcc85797c2b839544a3132e7468b0193
+    - name: Bat_animations_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 26
+        y: 28
+        width: 28
+        height: 10
+      spriteId: 9b5b206c3083aa243aa94fdb4fedfe67
+    - name: Bat_animations_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 45
+        y: 25
+        width: 9
+        height: 16
+      spriteId: 168892a18434a8241800a50143a1d615
+    - name: Bat_animations_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 45
+        y: 32
+        width: 9
+        height: 2
+      spriteId: b877d26257afb014f823813bb3581dbe
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 128}

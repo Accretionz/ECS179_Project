@@ -94,7 +94,11 @@ public class SoundPanel : MonoBehaviour
         SceneManager.LoadScene(sceneID);
     }
     */
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> master
 
     //-------------------For toggle button and sliders--------------------------
     public void ToggleBgm()

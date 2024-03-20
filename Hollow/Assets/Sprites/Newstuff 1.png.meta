@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b514a1e2f071448cc8edca004dbcf5be
+=======
+guid: 435026158aa8f4fda9850bf36ae4363a
+>>>>>>> master
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +48,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
+<<<<<<< HEAD
   spriteExtrude: 2
+=======
+  spriteExtrude: 1
+>>>>>>> master
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -70,7 +78,11 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
+<<<<<<< HEAD
     resizeAlgorithm: 1
+=======
+    resizeAlgorithm: 0
+>>>>>>> master
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -126,6 +138,7 @@ TextureImporter:
       name: Newstuff 1_0
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 78
         y: 9
         width: 64
@@ -133,12 +146,26 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 9, y: 9, z: 9, w: 9}
+=======
+        x: 62
+        y: 78
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> master
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: ce675a2c836bd412abad08e44d12c6f8
       internalID: 79766306
+=======
+      spriteID: 93be220880c44425ca20d8c0e603e9c0
+      internalID: 1060356495
+>>>>>>> master
       vertices: []
       indices: 
       edges: []
@@ -148,18 +175,32 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 117
+<<<<<<< HEAD
         y: 109
         width: 20
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 4, y: 4, z: 4, w: 3}
+=======
+        y: 130
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> master
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 531f517cd515742d49259c13563563d1
       internalID: -395032147
+=======
+      spriteID: 127cd786ba0864891b1c145f87341851
+      internalID: -805651573
+>>>>>>> master
       vertices: []
       indices: 
       edges: []
@@ -169,18 +210,74 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 117
+<<<<<<< HEAD
         y: 130
         width: 20
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 4, y: 4, z: 4, w: 4}
+=======
+        y: 108
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> master
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: cd01d94475e1b4aa7bda476c2232417a
       internalID: -1083474102
+=======
+      spriteID: ca58dcc23be794cb4a316e0be85e824c
+      internalID: -909418315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Newstuff 1_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 102
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 7, z: 7, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2808bab9c9943d3956196a66d3109d
+      internalID: 1981379236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Newstuff 1_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 9
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 9, y: 9, z: 9, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f99405f3c1f48df845d34407c9d9e7
+      internalID: 132161374
+>>>>>>> master
       vertices: []
       indices: 
       edges: []
@@ -196,9 +293,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Newstuff 1_0: 79766306
       Newstuff 1_1: -395032147
       Newstuff 1_2: -1083474102
+=======
+      Newstuff 1_0: 1060356495
+      Newstuff 1_1: -805651573
+      Newstuff 1_2: -909418315
+      Newstuff 1_3: 1981379236
+      Newstuff 1_4: 132161374
+>>>>>>> master
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

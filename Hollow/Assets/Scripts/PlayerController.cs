@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     private float currentSpeed;
     private float lastHorizontalInput;
+    private float elapsedTime;
+    private float lastHealing;
 
 
     void Awake()
@@ -40,6 +42,10 @@ public class PlayerController : MonoBehaviour
         healthController = GameObject.Find("HealthBar").GetComponent<PlayerHealthController>();
         healthController.SetHealth(maxHealth);
         currentHealth = maxHealth;
+        // set up experience bar for player
+        experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
+        experienceController.SetExperience(0);
+        currentExperience = 0;
        
     }
 
@@ -75,12 +81,23 @@ public class PlayerController : MonoBehaviour
         // spriteRenderer.flipX = lastHorizontalInput < 0f;
 
         rb.velocity = movementDirection * currentSpeed;
+<<<<<<< HEAD
+=======
         
 
         // set up experience bar for player
         experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
         experienceController.SetExperience(0);
         currentExperience = 0;
+
+        // Timer system
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime - lastHealing >= 15.0)
+        {
+            playerHealing();
+            lastHealing = elapsedTime;
+        }
+>>>>>>> origin/master
     }
 
     // if enemy touches player, lose heart
@@ -107,9 +124,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void playerHealing()
+    {
+        currentHealth += 1;
+        healthController.SetHealth(currentHealth);
+    }
+
     public void ExperienceChange(int experience)
     {
         currentExperience += experience;
+        Debug.Log("current Experience: " + currentExperience);
         experienceController.SetExperience(currentExperience);
         if(currentExperience >= maxExperience)
         {
@@ -122,9 +146,10 @@ public class PlayerController : MonoBehaviour
     {
         // each higher level gives player one more heart
         healthController.AddHeart();
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
 
         // currentLevel++
+        experienceController.SetExperience(0);
         currentExperience = 0;
     }
 }
