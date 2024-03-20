@@ -62,6 +62,7 @@ public class CrowController : MobController
     {
         Debug.Log("Enemy died!");
         animator.SetBool("isDead", true);
+        player.GetComponent<PlayerController>().ExperienceChange(100);
         Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
 
         // Destroy(gameObject);

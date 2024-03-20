@@ -81,14 +81,6 @@ public class PlayerController : MonoBehaviour
         // spriteRenderer.flipX = lastHorizontalInput < 0f;
 
         rb.velocity = movementDirection * currentSpeed;
-<<<<<<< HEAD
-=======
-        
-
-        // set up experience bar for player
-        experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
-        experienceController.SetExperience(0);
-        currentExperience = 0;
 
         // Timer system
         elapsedTime += Time.deltaTime;
@@ -97,7 +89,6 @@ public class PlayerController : MonoBehaviour
             playerHealing();
             lastHealing = elapsedTime;
         }
->>>>>>> origin/master
     }
 
     // if enemy touches player, lose heart
@@ -146,7 +137,9 @@ public class PlayerController : MonoBehaviour
     {
         // each higher level gives player one more heart
         healthController.AddHeart();
-        //currentHealth = maxHealth;
+        healthController.SetHealth(maxHealth);
+        currentHealth = maxHealth;
+
 
         // currentLevel++
         experienceController.SetExperience(0);
