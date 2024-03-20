@@ -107,6 +107,17 @@ public class PlayerController : MonoBehaviour
             healthController.SetHealth(currentHealth);
             checkDeath();
         }
+        // while (collision.gameObject.tag == "Enemy")
+        // {
+        //     currentHealth -= 1 + timer.damageIncrease;
+        //     // Debug.Log("Damage taken: " + (int)(1.0 + timer.damageIncrease));
+        //     if(currentHealth <= 0)
+        //     {
+        //         currentHealth = 0;
+        //     }
+        //     healthController.SetHealth(currentHealth);
+        //     checkDeath();
+        // }
     }
 
     public void checkDeath()
