@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private ExperienceController experienceController;
     private int maxExperience = 1000;
     private int currentExperience;
+    private FadingText LevelUpMsg;
     private SpriteRenderer spriteRenderer;
     private Vector2 movementDirection;
     private float currentSpeed;
@@ -46,6 +49,16 @@ public class PlayerController : MonoBehaviour
         experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
         experienceController.SetExperience(0);
         currentExperience = 0;
+        // Set up level up message
+        LevelUpMsg = GameObject.Find("LevelUpMessage").GetComponent<FadingText>();
+        if(LevelUpMsg)
+        {
+            Debug.Log(LevelUpMsg.name);
+        }
+        else
+        {
+            Debug.Log("Not found");
+        }
        
     }
 
@@ -140,9 +153,11 @@ public class PlayerController : MonoBehaviour
         //maxHealth = maxHealth + 2;
         healthController.SetHealth(healthController.maxHealth);
 
-
         // currentLevel++
         experienceController.SetExperience(0);
         currentExperience = 0;
+
+        // Show the level up message
+        LevelUpMsg.IsFadingIn(true);
     }
 }
