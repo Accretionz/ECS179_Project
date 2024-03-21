@@ -42,6 +42,7 @@ public class PlayerCombat : MonoBehaviour
                 {
                     numFireballs += 1;
                     var playerPosition = this.gameObject.transform.position;
+                    AudioManager.instance.PlaySoundEffects("FireSpell");
                     Instantiate(fireballPrefab, new Vector3(playerPosition.x, playerPosition.y + 1, playerPosition.z), Quaternion.identity);
                 }
             } 
@@ -80,6 +81,7 @@ public class PlayerCombat : MonoBehaviour
         var topLeftRotation = Quaternion.AngleAxis(315, Vector3.forward);
         var bottomLeftRotation = Quaternion.AngleAxis(45, Vector3.forward);
         var bottomRightRotation = Quaternion.AngleAxis(135, Vector3.forward);
+        AudioManager.instance.PlaySoundEffects("BlueSpell");
         Instantiate(blueFirePrefab, new Vector3(playerPosition.x + 0.1f, playerPosition.y + 0.1f, playerPosition.z), topRightRotation);
         Instantiate(blueFirePrefab, new Vector3(playerPosition.x - 0.1f, playerPosition.y + 0.1f, playerPosition.z), topLeftRotation);
         Instantiate(blueFirePrefab, new Vector3(playerPosition.x + 0.1f, playerPosition.y - 0.1f, playerPosition.z), bottomRightRotation);

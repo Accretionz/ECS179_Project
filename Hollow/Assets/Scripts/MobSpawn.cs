@@ -81,6 +81,7 @@ public class MobSpawn : MonoBehaviour
                 }
                 if (!bossSpawn && Timer >= 60.0f)
                 {
+                    AudioManager.instance.PlaySoundEffects("BossGrunt");
                     Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
                     bossSpawn = true;
                 }
