@@ -10,7 +10,6 @@ public class FadingText : MonoBehaviour
     public TMP_Text levelNum;
     private float fadeTime;
     private bool fadingIn;
-    private int currentLevel;
 
     void Start()
     {
@@ -18,7 +17,6 @@ public class FadingText : MonoBehaviour
         levelUpMessage.CrossFadeAlpha(0, 0.0f, false);
         fadeTime = 0;
         fadingIn = false;
-        currentLevel = 0;
     }
 
     void Update()
