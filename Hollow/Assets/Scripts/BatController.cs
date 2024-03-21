@@ -64,6 +64,7 @@ public class BatController : MobController
 
     public override void TakeDamage(int damage)
     {
+        Debug.Log("TAKE DAMAGE CALLED");
         currentHealth -= damage;
         animator.SetTrigger("Damaged");
         if (currentHealth <= 0)
