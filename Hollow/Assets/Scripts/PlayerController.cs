@@ -157,5 +157,14 @@ public class PlayerController : MonoBehaviour
 
         // Show the level up message
         LevelUpMsg.IsFadingIn(true);
+
+        if (currentLevel >= 2)
+        {
+            this.gameObject.GetComponent<PlayerCombat>().ActivateFireball();
+        }
+        if (currentLevel >= 4)
+        {
+            this.gameObject.GetComponent<PlayerCombat>().ActivateBlueFire();
+        }
     }
 }

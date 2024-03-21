@@ -16,8 +16,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] public int attackDamage = 100;
     [SerializeField] public GameObject blueFirePrefab;
     [SerializeField] public GameObject fireballPrefab;
-    [SerializeField] public bool fireballActive = true;
-    [SerializeField] public bool blueFireActive = true;
+    [SerializeField] public bool fireballActive = false;
+    [SerializeField] public bool blueFireActive = false;
     [SerializeField] public int maxFireBalls = 2;
     private int numFireballs = 0;
     public LayerMask enemyLayers;
@@ -95,5 +95,15 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.transform.position, attackRange);
+    }
+
+    public void ActivateFireball()
+    {
+        fireballActive = true;
+    }
+
+    public void ActivateBlueFire()
+    {
+        blueFireActive = true;
     }
 }
