@@ -1,4 +1,4 @@
-# The title of your game #
+# Hollow Survivor #
 
 ## Summary ##
 
@@ -37,8 +37,13 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## User Interface and Input
 
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
-**Describe the default input configuration.**
+**Mian Meue and Death Scene**
+
+**Player Health Bar**
+
+**Player Experience Bar**
+
+**Level System**
 
 **Add an entry for each platform or input style your project supports.**
 
