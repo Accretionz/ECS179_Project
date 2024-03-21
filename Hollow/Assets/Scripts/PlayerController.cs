@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
         healthController.AddHeart();
         //maxHealth = maxHealth + 2;
         healthController.SetHealth(healthController.maxHealth);
+        currentHealth = healthController.maxHealth;
 
         // currentLevel++
         experienceController.SetExperience(0);

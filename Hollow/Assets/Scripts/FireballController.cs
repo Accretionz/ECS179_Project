@@ -26,8 +26,6 @@ public class FireballController : MonoBehaviour
         angle += speed * Time.deltaTime;
         var offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
         this.gameObject.transform.position = playerObject.transform.position + new Vector3(offset.x, offset.y, playerObject.transform.position.z);
-        
-        // this.gameObject.transform.RotateAround(playerObject.transform.position, zAxis, speed);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
