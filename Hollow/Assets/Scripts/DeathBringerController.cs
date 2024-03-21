@@ -53,6 +53,7 @@ public class DeathBringerController : MobController
             Timer = 0.0f;
         }
     }
+
     public override void TakeDamage(int damage)
     {
         currentHealth -= damage;
