@@ -7,8 +7,10 @@ using TMPro;
 public class FadingText : MonoBehaviour
 {
     public TMP_Text levelUpMessage;
+    public TMP_Text levelNum;
     private float fadeTime;
     private bool fadingIn;
+    private int currentLevel;
 
     void Start()
     {
@@ -16,6 +18,7 @@ public class FadingText : MonoBehaviour
         levelUpMessage.CrossFadeAlpha(0, 0.0f, false);
         fadeTime = 0;
         fadingIn = false;
+        currentLevel = 0;
     }
 
     void Update()
@@ -29,6 +32,9 @@ public class FadingText : MonoBehaviour
         {
             levelUpMessage.CrossFadeAlpha(0, 0.5f, false);
         }
+        //currentLevel = PlayerController.currentLevel;
+        ShowLevelNum(PlayerController.currentLevel);
+        //Debug.Log("currentLevel: " + PlayerController.currentLevel);
     }
 
     public void IsFadingIn(bool fadingIn)
@@ -46,5 +52,10 @@ public class FadingText : MonoBehaviour
             fadingIn = false;
             fadeTime = 0;
         }
+    }
+
+    public void ShowLevelNum(int currentLevel)
+    {
+        levelNum.text = "Level: " + currentLevel;
     }
 }
