@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private float lastHorizontalInput;
     private float elapsedTime;
     private float lastHealing;
+    public static int currentLevel;
 
 
     void Awake()
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Not found");
         }
+        currentLevel = 0;
        
     }
 
@@ -157,7 +159,8 @@ public class PlayerController : MonoBehaviour
         healthController.SetHealth(healthController.maxHealth);
         currentHealth = healthController.maxHealth;
 
-        // currentLevel++
+        currentLevel++;
+
         experienceController.SetExperience(0);
         currentExperience = 0;
 

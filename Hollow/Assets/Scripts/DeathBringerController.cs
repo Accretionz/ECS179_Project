@@ -49,6 +49,7 @@ public class DeathBringerController : MobController
         this.agent.SetDestination(player.transform.position);
         if (Vector2.Distance(player.transform.position, transform.position) <= 20 && Timer > attackInterval)
         {
+            AudioManager.instance.PlaySoundEffects("BossAttack");
             animator.SetTrigger("Attack");
             Timer = 0.0f;
         }
@@ -67,6 +68,7 @@ public class DeathBringerController : MobController
     public override void Die()
     {
         Debug.Log("Boss died!");
+        AudioManager.instance.PlaySoundEffects("BossDead");
         animator.SetBool("isDead", true);
         Destroy(gameObject, 1.15f);
     }
