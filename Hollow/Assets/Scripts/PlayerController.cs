@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        currentSpeed = 3f; // Initialize speed
+        currentSpeed = 1.5f; // Initialize speed
 
         if(!rb)
         {
