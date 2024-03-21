@@ -15,4 +15,14 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void HighScore()
+    {
+        SceneManager.LoadScene("Highscore");
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

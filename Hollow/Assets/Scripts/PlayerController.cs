@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private float elapsedTime;
     private float lastHealing;
 
+    [SerializeField] HighscoreHandler highscoreHandler;
 
     void Awake()
     {
@@ -120,6 +121,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    [SerializeField] string playerName;
+
     public void checkDeath()
     {
         if(currentHealth <= 0)
@@ -127,6 +130,18 @@ public class PlayerController : MonoBehaviour
             AudioManager.instance.PlaySoundEffects("PlayerDead");
             AudioManager.instance.bgmSource.Stop();
             SceneManager.LoadScene("DeathScene");
+
+            HighscoreHandler highscoreHandler = GameObject.FindObjectOfType<HighscoreHandler>();
+
+            // Check if the HighscoreHandler instance is not null
+            if (highscoreHandler != null)
+            {
+                // Create a new HighscoreElement with the player's name and score
+                HighscoreElement newHighscore = new HighscoreElement(playerName, (int)elapsedTime);
+
+                // Add the new high score if it's in the top maxCount scores
+                highscoreHandler.AddHighScoreIfPossible(newHighscore);
+            }
         }
     }
 

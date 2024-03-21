@@ -24,6 +24,8 @@ public class SoundPanel : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject panel;
+
     void Awake()
     {
         Debug.Log("Script Works--Awake");
