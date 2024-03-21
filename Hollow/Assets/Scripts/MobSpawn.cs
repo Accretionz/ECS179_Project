@@ -10,6 +10,8 @@ public class MobSpawn : MonoBehaviour
     [SerializeField]
     private GameObject rangedMob;
     [SerializeField]
+    private GameObject bossMob;
+    [SerializeField]
     private float minSpawnTime;
     [SerializeField]
     private float maxSpawnTime;
@@ -21,6 +23,7 @@ public class MobSpawn : MonoBehaviour
     private float timeUntilSpawn;
     private float timeUntilRangedSpawn = 20.0f;
     private float Timer;
+    private bool bossSpawn = false;
 
     void Start()
     {
@@ -75,6 +78,11 @@ public class MobSpawn : MonoBehaviour
                 else
                 {
                     Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
+                }
+                if (!bossSpawn && Timer >= 60.0f)
+                {
+                    Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
+                    bossSpawn = true;
                 }
             }
             setRandomSpawnTime();

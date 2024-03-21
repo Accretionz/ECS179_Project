@@ -55,12 +55,10 @@ public class BatController : MobController
             Timer += Time.deltaTime;
             if (Timer > timeSinceAttack)
             {
-                animator.SetBool("isAttacking", true);
-                animator.SetBool("isIdle", true);
+                animator.SetTrigger("Attack");
                 Instantiate(this.projectile, transform.position, Quaternion.identity);
                 Timer = 0.0f;
             }
-            animator.SetBool("isIdle", false);
         }
     }
 
