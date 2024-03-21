@@ -52,16 +52,7 @@ public class PlayerController : MonoBehaviour
         currentExperience = 0;
         // Set up level up message
         LevelUpMsg = GameObject.Find("LevelUpMessage").GetComponent<FadingText>();
-        if(LevelUpMsg)
-        {
-            Debug.Log(LevelUpMsg.name);
-        }
-        else
-        {
-            Debug.Log("Not found");
-        }
         currentLevel = 0;
-       
     }
 
     void Update()
