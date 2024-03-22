@@ -62,15 +62,36 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
 
 ## User Interface and Input
 
-**Mian Meue and Death Scene**
+**Main Meue and Death Scene**
+
+![Game Over Scene](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/a096846b-2506-4d51-9c30-48045ea3b0a7)
+
+The main menu contains the game title, the start button, and the quit button. All the buttons have a hover effect that deepens the color when the player hovers over them. When the start button is pressed, the [`main menu script`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/MainMenu.cs) allows the player to jump to the game scene to start playing. When the quit button is pressed, the game will stop the quit.
+
+![Main Menu](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/c94e9d49-38d0-474e-8ebb-f7c005b9d7bd)
+
+When the player has zero health, the death scene will loaded. The death scene contains the restart button to let the player back to the game and the quit button to quit the game.
 
 **Player Health Bar**
 
+![Health Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/6f632ca8-1453-4578-9d30-f7021fee201f)
+
+The player health bar displays player health in the upper left corner. The [`health controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/PlayerHealthController.cs) script is designed to define the initial health, max health, and functions that can implement the health changes throughout the game. Based on current health, the bar would display the correct number of full, half, and empty hearts. Half of a heart will be gone when an enemy or a projectile damages the player.
+
 **Player Experience Bar**
+
+![XP Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/93b2c803-c077-4513-bd85-5b2d2219704b)
+
+The experience bar displays the current experience in the top center of the screen. The player can gain experience by killing different types of enemies. A crow is worth 100, a bat is worth 200 and a boss is worth 500. The [`experience controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/ExperienceController.cs) is designed to keep track of the status of the experience bar. There are a total of 9 statuses for the bar besides empty and full status. The bar will display the correct image based on the ratio of the current experience to the maximum experience. Maximum experience is increasing as the game level goes up. More experience is required to reach the next level.
 
 **Level System**
 
-**Add an entry for each platform or input style your project supports.**
+When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
+
+**Resouces Used**  
+[Font](https://nimblebeastscollective.itch.io/magosfonts)  
+[Panel for main menu and death scene](https://kenney-assets.itch.io/fantasy-ui-borders)  
+[Health bar and experience bar UI](https://byandrox.itch.io/crimson-fantasy-gui)  
 
 ## Movement/Physics
 
