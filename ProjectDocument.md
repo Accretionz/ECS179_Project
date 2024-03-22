@@ -13,8 +13,13 @@ Rogue Hollow takes place in a grim fantasy world where the player, a mysterious 
 
 ## Gameplay Explanation ##
 
-**In this section, explain how the game should be played. Treat this as a manual within a game. Explaining the button mappings and the most optimal gameplay strategy is encouraged.**
-
+- The basic movement of the game is `wasd` or the `arrow keys` where `a` or `left arrow` would move the player left.
+- Combat system for the player's attack is `automatic` with a time delay.
+- Navigate across the terrian as you avoid the incoming enemies while trying to slay them to gain experience points.
+- Experience points allow user to level up and get stronger with new abilities the higher level you are.
+- Enemies spawn around you and moves toward the player in an attempt to attack you.
+  - Every minute a boss monster spawns that has tons more health and does more damage with unique attack skill
+- Timer system to keep track of total survival time as you aim to be the longest survived.
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
