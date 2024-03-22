@@ -8,8 +8,7 @@ Rogue Hollow takes place in a grim fantasy world where the player, a mysterious 
 
 [Web-playable version of your game.](https://itch.io/)  
 [Trailor](https://youtube.com)  
-[Press Kit](https://dopresskit.com/)  
-[Proposal: make your own copy of the linked doc.](https://docs.google.com/document/d/1qwWCpMwKJGOLQ-rRJt8G8zisCa2XHFhv6zSWars0eWM/edit?usp=sharing)  
+[Press Kit](https://dopresskit.com/)   
 
 ## Gameplay Explanation ##
 
