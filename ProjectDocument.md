@@ -64,9 +64,10 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
   - Held three in-person meetings where we took the current progress of all team members and tried compiling it into one game and fixing any bugs that arose.
 - Assisted in creation of the player object as well as implementation of the movement system accompanying the sprite animation changes.
 
-## User Interface and Input
+## User Interface and Input - Maggie, Jingdan
 
-**Main Meue and Death Scene**
+**Maggie**
+**Main Menu and Death Scene**
 
 ![Game Over Scene](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/a096846b-2506-4d51-9c30-48045ea3b0a7)
 
@@ -92,16 +93,28 @@ The experience bar displays the current experience in the top center of the scre
 
 When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
 
+
+**Jingdan**
+**Music Control Panel/Pause Panel**
+![Music Control Panel](<img width="940" alt="Screenshot 2024-03-22 at 12 46 42 PM" src="https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638">)
+
+The pause panel will be poped up when the player click the upper right corner button. There are corresponding button and slider for adjusting background music and soundeffect. The 'SoundPanel.cs' is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other Ui elements, each button has two layer, a red box as background and a matching color icon above it.  
+
 **Resouces Used**  
 [Font](https://nimblebeastscollective.itch.io/magosfonts)  
 [Panel for main menu and death scene](https://kenney-assets.itch.io/fantasy-ui-borders)  
 [Health bar and experience bar UI](https://byandrox.itch.io/crimson-fantasy-gui)  
+[Button icons](https://gamedeveloperstudio.itch.io/icon-pack)
 
-## Movement/Physics
-
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
+## Movement/Physics - Ryan, Jacky, Daniel, Jingdan
 
 The player movement is usage of the basic wasd or arrow keys that allows the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game are mainly usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
+
+**Enemy AI - Ryan**
+
+This game is all about massive hordes of mobs swarming the player. To accomplish this I decided to use [NavMeshPlus](https://github.com/h8man/NavMeshPlus?tab=readme-ov-file) which is a 2D pathfinding system. Using NavMesh for the enemy AI was very helpful as the map we decided to use had a lot of terrain. Using NavMesh you can designate terrain as nonwalkable and have an easy solution for the enemies to path intelligently towards the player while avoiding terrain.
+
+[![EnemyPathFind](ExampleImage/enemy_ai.png)](https://github.com/Accretionz/Hollow-Survivor/blob/916b209df54d9b49bd89a2c377cb7cac9730f2bf/ExampleImage/enemy_ai.png)
 
 ## Animation and Visuals
 
@@ -119,26 +132,35 @@ The player movement is usage of the basic wasd or arrow keys that allows the pla
 
 ## Game Logic - Ryan Tan
 
-**Enemy AI**
-
-This game is all about massive hordes of mobs swarming the player. To accomplish this I decided to use [NavMeshPlus](https://github.com/h8man/NavMeshPlus?tab=readme-ov-file) which is a 2D pathfinding system. Using NavMesh for the enemy AI was very helpful as the map we decided to use had a lot of terrain. Using NavMesh you can designate terrain as nonwalkable and have an easy solution for the enemies to path intelligently towards the player while avoiding terrain.
-
-[![EnemyPathFind](ExampleImage/enemy_ai.png)](https://github.com/Accretionz/Hollow-Survivor/blob/916b209df54d9b49bd89a2c377cb7cac9730f2bf/ExampleImage/enemy_ai.png)
-
 **Design Pattern**
 
 We did not have a specific design pattern as most of our parts were done individually and then pieced together. The main bulk of the game are in the prefabs. This is how the enemy mobs and player attacks are generated and used in the game. Each prefab has their own designated controller to control their attack patterns and behaviour.
  
 
-# Sub-Roles
+# Sub-Roles 
 
-## Audio
+## Audio - Jingdan
+Initially the style for this game was dark fantasy and the map would be dark forest or underground caves so I chose a bit creepy bgm. After we have the forest map settled, I chose a lighter bgm used in battle scene. The bgm for start menu and dead scene is a little more upbeat. Sound effects for button, player, and enemies are from various asset packs listed below. The audio manager was initially adopted from Exercise 4 but has been modified to better control the music control panel. I only implemented the audio manager in main battle scene and use Audio Source for main menu scene and dead scene. To solve the bgm overlap problem, I use 'AudioManager.instance.bgmSource.Stop();' once the playe is dead and move to dead scene.
 
-**List your assets, including their sources and licenses.**
+**Assets**
+***Bgm***
+- [For main menu scene and dead scene](https://oscarj.itch.io/to-share) using #35
+- [For main battle scene](https://isiahgames.itch.io/super-hero-mini-music-pack)  using Enlightened Mind.
 
-**Describe the implementation of your audio system.**
+***Bgm***
+- [Button Click](https://byandrox.itch.io/crimson-fantasy-gui) using Cursor 2
+- [Player Attack](https://jdsherbert.itch.io/pixel-ui-sfx-pack) using SPLAT Crush 01
+- [Player Dead](https://jdsherbert.itch.io/pixel-ui-sfx-pack) using NEGATIVE Failure Descending chime 05 
+- [Gain Experience](https://jdsherbert.itch.io/pixel-ui-sfx-pack) using SUCCESS PICKUP
+- [Fireball spell](https://leohpaz.itch.io/rpg-essentials-sfx-free) using 04_Fire_explosion_04_medium
+- [Blueball spell](https://leohpaz.itch.io/rpg-essentials-sfx-free) using 22_Water_02
+- [Boss Attack](https://ateliermagicae.itch.io/monster-sound-effects-vol1) using Monster_Growl20
+- [Boss Dead](https://ateliermagicae.itch.io/monster-sound-effects-vol1) using Monster_Grunt5
 
-**Document the sound style.** 
+***Tutorial***
+- [Unity AUDIO MANAGER Tutorial](https://www.youtube.com/watch?v=rdX7nhH6jdM) by Rehope Games.
+- [PAUSE MENU in Unity](https://www.youtube.com/watch?v=JivuXdrIHK0) by Brackeys.
+
 
 ## Gameplay Testing
 
