@@ -70,6 +70,7 @@ public class DeathBringerController : MobController
         Debug.Log("Boss died!");
         AudioManager.instance.PlaySoundEffects("BossDead");
         animator.SetBool("isDead", true);
+        player.GetComponent<PlayerController>().ExperienceChange(500);
         Destroy(gameObject, 1.15f);
     }
 }
