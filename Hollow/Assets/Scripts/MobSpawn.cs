@@ -21,10 +21,10 @@ public class MobSpawn : MonoBehaviour
     private Camera managedCamera;
 
     private float timeUntilSpawn;
-    private float timeUntilRangedSpawn = 20.0f;
+    private float timeUntilRangedSpawn = 30.0f;
     private float Timer;
     private float bossTimer = 0.0f;
-    private bool bossSpawn = false;
+    private float bossSpawnTime = 120.0f;
 
     void Start()
     {
@@ -77,14 +77,7 @@ public class MobSpawn : MonoBehaviour
                     }
                     else
                     {
-                        if (Timer >= 120.0f)
-                        {
-                            Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
-                        }
-                        else
-                        {
-                            Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
-                        }
+                         Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);                   
                     }
                 }
                 else
@@ -92,11 +85,13 @@ public class MobSpawn : MonoBehaviour
                     Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
                 }
                 // Spawn boss type mob.
-                if (bossTimer >= 90.0f)
+                if (bossTimer >= bossSpawnTime)
                 {
                     AudioManager.instance.PlaySoundEffects("BossGrunt");
                     Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
                     bossTimer = 0.0f;
+                    bossSpawnTime -= 20.0f;
+                    numMobs++;
                 }
             }
             setRandomSpawnTime();

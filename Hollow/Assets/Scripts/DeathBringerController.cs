@@ -8,8 +8,6 @@ public class DeathBringerController : MobController
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float rotationSpeed;
-    [SerializeField]
     private NavMeshAgent agent;
     [SerializeField]
     private float attackInterval;
@@ -47,6 +45,7 @@ public class DeathBringerController : MobController
 
         }
         this.agent.SetDestination(player.transform.position);
+        // Attack if player is close
         if (Vector2.Distance(player.transform.position, transform.position) <= 20 && Timer > attackInterval)
         {
             AudioManager.instance.PlaySoundEffects("BossAttack");

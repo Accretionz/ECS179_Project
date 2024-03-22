@@ -7,7 +7,7 @@ public class timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     float elapsedTime;
-    float lastDamageIncreaseTime = 0;
+    float lastDamageIncreaseTime = 240;
     public static int damageIncrease = 0;
 
     // void Awake()

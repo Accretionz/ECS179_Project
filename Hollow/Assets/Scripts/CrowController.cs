@@ -8,8 +8,6 @@ public class CrowController : MobController
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float rotationSpeed;
-    [SerializeField]
     private NavMeshAgent agent;
     
     private Rigidbody2D rigidBody;
@@ -20,6 +18,7 @@ public class CrowController : MobController
         player = GameObject.Find("Satyr");
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        agent.speed = speed;
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }

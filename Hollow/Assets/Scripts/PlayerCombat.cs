@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] public GameObject fireballPrefab;
     [SerializeField] public bool fireballActive = false;
     [SerializeField] public bool blueFireActive = false;
-    [SerializeField] public int maxFireBalls = 2;
+    [SerializeField] public int maxFireBalls = 1;
     private int numFireballs = 0;
     public LayerMask enemyLayers;
     // Start is called before the first frame update

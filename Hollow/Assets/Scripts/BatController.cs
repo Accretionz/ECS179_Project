@@ -25,6 +25,7 @@ public class BatController : MobController
         player = GameObject.Find("Satyr");
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        agent.speed = speed;
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
@@ -55,6 +56,7 @@ public class BatController : MobController
             Timer += Time.deltaTime;
             if (Timer > timeSinceAttack)
             {
+                // Attack and spawn projectile.
                 animator.SetTrigger("Attack");
                 Instantiate(this.projectile, transform.position, Quaternion.identity);
                 Timer = 0.0f;
@@ -79,7 +81,5 @@ public class BatController : MobController
         animator.SetBool("isDead", true);
         player.GetComponent<PlayerController>().ExperienceChange(200);
         Destroy(gameObject, 0.52f);
-
-        // Destroy(gameObject);
     }
 }
