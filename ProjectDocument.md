@@ -42,9 +42,11 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
   - Tested implementation of the ADSR movement feature but didn't feel right for the game.
 - Week 3:
   - Meeting to discuss current progress and whether we're on track for the deadline. Determining which features to focus on.
+  - Organized the first progress report between the two groups and facilitated conversation
 - Week 4:
   - Implementation of a timer system and UI for the timer.
   - Used timer to increase difficulty of enemies and provide passive regen for player.
+  - Organized the second progress report between the two groups and facilitated conversation
 - Week 5:
   - Two meetings where the team got together to put together an almost finised version of the game and fix any merging problems.
   - Discuss any balancing issues that needed to be implemented for the game to feel better when playing
@@ -118,5 +120,10 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
   - Also added [passive regeneration](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/PlayerController.cs#L93) that occurs every 15 seconds
   - Attempted implementation of a leaderboard where it keeps track of the highest scores and stores the data using json files. However it doesn't display the scores on the leaderboard UI screen correctly.
   - ![Screenshot 2024-03-20 191135](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/27eebdac-4085-43e0-9c71-0958cdfbfc07)
+ 
+- Spent the final few days making balance changes for the game.
+  - Altering the movement speed of the player and enemies to make it feel balanced but still provide challenge.
+  - Increased enemies health to make it harder to kill, increasing difficulty
+  - Removed the healing to full health every level up due to it being too broken and caused a visual bug
 
 
