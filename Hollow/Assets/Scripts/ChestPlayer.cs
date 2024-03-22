@@ -62,4 +62,19 @@ public class ChestPlayer : MonoBehaviour
 
         rb.velocity = movementDirection * currentSpeed;
     }
+
+    // When player touch the teleport
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*
+        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            canOpen = true;
+        }
+        */
+        if (collision.gameObject.tag == "Teleport")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+    }
 }
