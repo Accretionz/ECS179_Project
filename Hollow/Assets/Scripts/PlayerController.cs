@@ -148,8 +148,9 @@ public class PlayerController : MonoBehaviour
     {
         // each higher level gives player one more heart
         healthController.AddHeart();
-        //maxHealth = maxHealth + 2;
-        healthController.SetHealth(healthController.maxHealth);
+        maxHealth = healthController.maxHealth;
+        currentHealth = currentHealth + 2;
+        healthController.SetHealth(currentHealth);
 
         currentLevel++;
 
