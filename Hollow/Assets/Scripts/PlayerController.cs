@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
         // Timer system
         elapsedTime += Time.deltaTime;
-        if (elapsedTime - lastHealing >= 15.0)
+        if (elapsedTime - lastHealing >= 10.0)
         {
             playerHealing();
             lastHealing = elapsedTime;

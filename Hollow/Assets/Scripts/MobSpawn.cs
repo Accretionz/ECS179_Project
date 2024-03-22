@@ -61,12 +61,15 @@ public class MobSpawn : MonoBehaviour
                     // Spawn from top side.
                     spawnLocation = managedCamera.ViewportToWorldPoint(new Vector3(Random.Range(0.0f, 1.0f), 1, managedCamera.nearClipPlane));
                 }
+
+                // Check to see if spawning on valid NavMesh. If not finds the closest valid area to spawn.
                 NavMeshHit hit;
                 UnityEngine.AI.NavMesh.SamplePosition(spawnLocation, out hit, Mathf.Infinity, UnityEngine.AI.NavMesh.AllAreas);
                 spawnLocation = hit.position;
                 spawnLocation.z = 0;
                 if (Timer >= timeUntilRangedSpawn)
                 {
+                    // Random chance to spawn ranged mobs.
                     int randMob = Random.Range(0, 3);
                     if (randMob == 0)
                     {
@@ -74,14 +77,22 @@ public class MobSpawn : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
+                        if (Timer >= 120.0f)
+                        {
+                            Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
+                        }
+                        else
+                        {
+                            Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
+                        }
                     }
                 }
                 else
                 {
                     Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
                 }
-                if (bossTimer >= 60.0f)
+                // Spawn boss type mob.
+                if (bossTimer >= 90.0f)
                 {
                     AudioManager.instance.PlaySoundEffects("BossGrunt");
                     Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
