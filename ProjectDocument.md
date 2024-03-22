@@ -34,8 +34,21 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## Producer - Jacky Liu
 
-- Organized a team of skilled programmers in an attempt to create a fun and playable game.
-  - Roles were assigned based on preferences for the most part.
+Organized a team of skilled programmers in an attempt to create a fun and playable game. Roles were assigned based on preferences for the most part. Game concept was discussed and ideas collected from everyone before coming to a consensus of the game we wanted to create. With a 5 week deadline to create a game, we needed an organized timeline and weekly check-ins to keep track of the progress and meet the deadline.
+- Week 1:
+  - Two meetings where the first was an introduction with the team and discussion of game concept. Second meeting was for writing up the [inital plan](https://docs.google.com/document/d/1lrni1k-Eq6woD4tsD7fNe8eLkTi1OK9iI9SIc25sxOk/edit) and planning for the other weeks task.
+- Week 2:
+  - Basic organization of the game with player object and movement created to allow other team members to utilize it for implementation of their own tasks.
+  - Tested implementation of the ADSR movement feature but didn't feel right for the game.
+- Week 3:
+  - Meeting to discuss current progress and whether we're on track for the deadline. Determining which features to focus on.
+- Week 4:
+  - Implementation of a timer system and UI for the timer.
+  - Used timer to increase difficulty of enemies and provide passive regen for player.
+- Week 5:
+  - Two meetings where the team got together to put together an almost finised version of the game and fix any merging problems.
+  - Discuss any balancing issues that needed to be implemented for the game to feel better when playing
+
 - Setting up a discord server where communication between the team can be easy and effective.
   - Having different channels that correspond to different components of the project like an assests channel.
 - Setting up the github page as an effective way for the team to push and pull changes done by other team memebers.
@@ -43,6 +56,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 - Usage of [whentomeet](https://www.when2meet.com/?24178901-VsgTi) to organize weekly check-in meetings with the group.
   - Some meetings were held online as it was to get the groups collective input regarding the progress and steps needed to take moving forward.
   - Held three in-person meetings where we took the current progress of all team members and tried compiling it into one game and fixing any bugs that arose.
+- Assisted in creation of the player object as well as implementation of the movement system accompanying the sprite animation changes.
 
 ## User Interface and Input
 
@@ -96,6 +110,13 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
 
-## Game Feel and Polish
+## Game Feel and Polish - Jacky Liu
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+- Added a UI for the timer and coded the implementation of the [timer system](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/Timer.cs#L24) that connects with the UI.
+  - Used the timer system as a way to increase difficulty of the enemies where they deal [increased damage](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/PlayerController.cs#L105)
+  - Also added [passive regeneration](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/PlayerController.cs#L93) that occurs every 15 seconds
+  - Attempted implementation of a leaderboard where it keeps track of the highest scores and stores the data using json files. However it doesn't display the scores on the leaderboard UI screen correctly.
+  - ![Screenshot 2024-03-20 191135](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/27eebdac-4085-43e0-9c71-0958cdfbfc07)
+
+
