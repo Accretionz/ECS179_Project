@@ -1,8 +1,8 @@
-# Hollow Survivor #
+# Game Basic Information #
 
 ## Summary ##
 
-**A paragraph-length pitch for your game.**
+Rogue Hollow takes place in a grim fantasy world where the player, a mysterious warrior who has been exiled from their homeland, must purge their world of all evil in hopes that they may one day be able to return to the land they love or die trying. As the player slays enemies, they are granted divine blessings that unlock hidden powers, make them stronger, and improve their chances of survival. However, as the player purges the world of unclean beings, the forces of evil also begin to take notice, sending greater and more powerful enemies to stop this courageous champion.
 
 ## Project Resources
 
@@ -13,16 +13,17 @@
 
 ## Gameplay Explanation ##
 
-**In this section, explain how the game should be played. Treat this as a manual within a game. Explaining the button mappings and the most optimal gameplay strategy is encouraged.**
-
+- The basic movement of the game is `wasd` or the `arrow keys` where `a` or `left arrow` would move the player left.
+- Combat system for the player's attack is `automatic` with a time delay.
+- Navigate across the terrian as you avoid the incoming enemies while trying to slay them to gain experience points.
+- Experience points allow user to level up and get stronger with new abilities the higher level you are.
+- Enemies spawn around you and moves toward the player in an attempt to attack you.
+  - Every minute a boss monster spawns that has tons more health and does more damage with unique attack skill
+- Timer system to keep track of total survival time as you aim to be the longest survived.
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
 # Main Roles #
-
-Your goal is to relate the work of your role and sub-role in terms of the content of the course. Please look at the role sections below for specific instructions for each role.
-
-Below is a template for you to highlight items of your work. These provide the evidence needed for your work to be evaluated. Try to have at least four such descriptions. They will be assessed on the quality of the underlying system and how they are linked to course content. 
 
 *Short Description* - Long description of your work item that includes how it is relevant to topics discussed in class. [link to evidence in your repository](https://github.com/dr-jam/ECS189L/edit/project-description/ProjectDocumentTemplate.md)
 
@@ -31,9 +32,33 @@ Here is an example:
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
-## Producer
+## Producer - Jacky Liu
 
-**Describe the steps you took in your role as producer. Typical items include group scheduling mechanisms, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, dependency/task tracking, Gantt charts, etc.), and repository management methodology.**
+Organized a team of skilled programmers in an attempt to create a fun and playable game. Roles were assigned based on preferences for the most part. Game concept was discussed and ideas collected from everyone before coming to a consensus of the game we wanted to create. With a 5 week deadline to create a game, we needed an organized timeline and weekly check-ins to keep track of the progress and meet the deadline.
+- Week 1:
+  - Two meetings where the first was an introduction with the team and discussion of game concept. Second meeting was for writing up the [inital plan](https://docs.google.com/document/d/1lrni1k-Eq6woD4tsD7fNe8eLkTi1OK9iI9SIc25sxOk/edit) and planning for the other weeks task.
+- Week 2:
+  - Basic organization of the game with player object and movement created to allow other team members to utilize it for implementation of their own tasks.
+  - Tested implementation of the ADSR movement feature but didn't feel right for the game.
+- Week 3:
+  - Meeting to discuss current progress and whether we're on track for the deadline. Determining which features to focus on.
+  - Organized the first progress report between the two groups and facilitated conversation
+- Week 4:
+  - Implementation of a timer system and UI for the timer.
+  - Used timer to increase difficulty of enemies and provide passive regen for player.
+  - Organized the second progress report between the two groups and facilitated conversation
+- Week 5:
+  - Two meetings where the team got together to put together an almost finised version of the game and fix any merging problems.
+  - Discuss any balancing issues that needed to be implemented for the game to feel better when playing
+
+- Setting up a discord server where communication between the team can be easy and effective.
+  - Having different channels that correspond to different components of the project like an assests channel.
+- Setting up the github page as an effective way for the team to push and pull changes done by other team memebers.
+  - Usage of branches to provide a more organized structure and allow for changes to be made without altering the master branch (but a pain to remerge)
+- Usage of [whentomeet](https://www.when2meet.com/?24178901-VsgTi) to organize weekly check-in meetings with the group.
+  - Some meetings were held online as it was to get the groups collective input regarding the progress and steps needed to take moving forward.
+  - Held three in-person meetings where we took the current progress of all team members and tried compiling it into one game and fixing any bugs that arose.
+- Assisted in creation of the player object as well as implementation of the movement system accompanying the sprite animation changes.
 
 ## User Interface and Input
 
@@ -87,6 +112,18 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
 
-## Game Feel and Polish
+## Game Feel and Polish - Jacky Liu
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+- Added a UI for the timer and coded the implementation of the [timer system](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/Timer.cs#L24) that connects with the UI.
+  - Used the timer system as a way to increase difficulty of the enemies where they deal [increased damage](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/PlayerController.cs#L105)
+  - Also added [passive regeneration](https://github.com/Accretionz/Hollow-Survivor/blob/1b1df3d0df6cc7b45ec2193a53eaad45bcbde39a/Hollow/Assets/Scripts/PlayerController.cs#L93) that occurs every 15 seconds
+  - Attempted implementation of a leaderboard where it keeps track of the highest scores and stores the data using json files. However it doesn't display the scores on the leaderboard UI screen correctly.
+  - ![Screenshot 2024-03-20 191135](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/27eebdac-4085-43e0-9c71-0958cdfbfc07)
+ 
+- Spent the final few days making balance changes for the game.
+  - Altering the movement speed of the player and enemies to make it feel balanced but still provide challenge.
+  - Increased enemies health to make it harder to kill, increasing difficulty
+  - Removed the healing to full health every level up due to it being too broken and caused a visual bug
+
+
