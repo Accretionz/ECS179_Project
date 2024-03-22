@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
+// https://youtu.be/ILUbcxfvEMk?si=LLWS_WPkg6htBypf
+
 public class ChestPlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -66,15 +68,17 @@ public class ChestPlayer : MonoBehaviour
     // When player touch the teleport
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
-        {
-            canOpen = true;
-        }
-        */
         if (collision.gameObject.tag == "Teleport")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            // Time.timeScale = 1f;
+            // Destroy(gameObject);
+            
+            if (PlayerPrefs.GetInt("LoadSaved") == 1)
+            {
+                SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+            }
+            
+            //SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
         }
         if (collision.gameObject.tag == "Teleport2")
         {

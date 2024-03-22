@@ -57,6 +57,19 @@ public class PlayerController : MonoBehaviour
         currentLevel = 0;
     }
 
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("TimeToLoad") == 1)
+        {
+            currentHealth = PlayerPrefs.GetInt("Health");
+            currentExperience = PlayerPrefs.GetInt("Ep");
+            currentLevel = PlayerPrefs.GetInt("Level");
+            currentSpeed = PlayerPrefs.GetFloat("Speed");
+            PlayerPrefs.SetInt("TimeToLoad", 0);
+            PlayerPrefs.Save();
+        }
+    }
+
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -141,7 +154,22 @@ public class PlayerController : MonoBehaviour
             AudioManager.instance.PlaySoundEffects("GainXp");
             LevelUp();
         }
-        
+    }
+
+    public void SaveData()
+    {
+        PlayerPrefs.SetInt("Health", currentHealth);
+        PlayerPrefs.SetInt("Ep",currentExperience);
+        PlayerPrefs.SetInt("Level", currentLevel);
+        PlayerPrefs.SetFloat("Speed", currentSpeed);
+        PlayerPrefs.SetInt("Saved", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadData()
+    {
+        PlayerPrefs.SetInt("TimeToLoad", 1);
+        PlayerPrefs.Save();
     }
 
     public void LevelUp()
@@ -164,10 +192,23 @@ public class PlayerController : MonoBehaviour
 
         if (currentLevel >= 2)
         {
+            // Pause game and go to spell-gained scene to get Fire Spell
+            // Time.timeScale = 0f;
+            SaveData();
+            PlayerPrefs.SetInt("LoadSaved", 1);
+            PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("NewChestScene");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             this.gameObject.GetComponent<PlayerCombat>().ActivateFireball();
         }
         if (currentLevel >= 4)
         {
+            // Pause game and go to spell-gained scene to get Blue Spell
+            SaveData();
+            PlayerPrefs.SetInt("LoadSaved", 1);
+            PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("NewChestScene");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             this.gameObject.GetComponent<PlayerCombat>().ActivateBlueFire();
         }
     }
