@@ -70,7 +70,10 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            enemy.GetComponent<MobController>().TakeDamage(attackDamage);
+            if (enemy != null && enemy.GetComponent<MobController>() != null)
+            {
+                enemy.GetComponent<MobController>().TakeDamage(attackDamage);
+            }
         }
     }
 

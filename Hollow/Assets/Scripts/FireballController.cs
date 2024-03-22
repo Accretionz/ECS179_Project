@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.IO;
 using UnityEngine;
 
 public class FireballController : MonoBehaviour
@@ -30,10 +32,12 @@ public class FireballController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ENEMY DETECTED");
         if ("Enemy" == other.tag)
         {
-            other.GetComponent<MobController>().TakeDamage(fireballDamage);
+            if (other != null && other.GetComponent<MobController>() != null)
+            {
+                other.GetComponent<MobController>().TakeDamage(fireballDamage);
+            }
         }
     }
 }

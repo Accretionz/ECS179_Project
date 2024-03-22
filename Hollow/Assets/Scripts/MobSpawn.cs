@@ -77,7 +77,14 @@ public class MobSpawn : MonoBehaviour
                     }
                     else
                     {
-                         Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);                   
+                        if (Timer > 600.0f)
+                        {
+                            Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
+                        }
+                        else
+                        {
+                            Instantiate(this.meleeMob, spawnLocation, Quaternion.identity);
+                        }                
                     }
                 }
                 else
@@ -90,7 +97,10 @@ public class MobSpawn : MonoBehaviour
                     AudioManager.instance.PlaySoundEffects("BossGrunt");
                     Instantiate(this.bossMob, spawnLocation, Quaternion.identity);
                     bossTimer = 0.0f;
-                    bossSpawnTime -= 20.0f;
+                    if (bossSpawnTime > 35.0f)
+                    {
+                        bossSpawnTime -= 30.0f;
+                    }
                     numMobs++;
                 }
             }

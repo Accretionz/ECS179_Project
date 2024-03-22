@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.IO;
 using UnityEngine;
 
 public class BlueFireController : MonoBehaviour
@@ -17,7 +19,10 @@ public class BlueFireController : MonoBehaviour
     {
         if ("Enemy" == other.tag)
         {
-            other.GetComponent<MobController>().TakeDamage(blueFireDamage);
+            if (other != null && other.GetComponent<MobController>() != null)
+            {
+                other.GetComponent<MobController>().TakeDamage(blueFireDamage);
+            }
         }
     }
 

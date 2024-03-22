@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
+//using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -150,6 +150,10 @@ public class PlayerController : MonoBehaviour
         healthController.AddHeart();
         maxHealth = healthController.maxHealth;
         currentHealth = currentHealth + 2;
+        if (currentHealth > 20)
+        {
+            currentHealth = 20;
+        }
         healthController.SetHealth(currentHealth);
 
         currentLevel++;
@@ -170,6 +174,46 @@ public class PlayerController : MonoBehaviour
         if (currentLevel >= 4)
         {
             this.gameObject.GetComponent<PlayerCombat>().ActivateBlueFire();
+        }
+
+        if (currentLevel >= 5)
+        {
+            int num = Random.Range(0, 4);
+            if (num == 0)
+            {
+                if (this.gameObject.GetComponent<PlayerCombat>().maxFireBalls < 6)
+                {
+                    this.gameObject.GetComponent<PlayerCombat>().maxFireBalls++;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<PlayerCombat>().maxFireBalls = 10;
+                }
+            }
+            else if (num == 1)
+            {
+                if (this.gameObject.GetComponent<PlayerCombat>().blueFireInterval > 0.8f)
+                {
+                    this.gameObject.GetComponent<PlayerCombat>().blueFireInterval -= 0.1f;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<PlayerCombat>().blueFireInterval = 0.4f;
+                }
+            }
+            else if (num == 2)
+            {
+                this.gameObject.GetComponent<PlayerCombat>().attackRange += 0.1f;
+                if (this.gameObject.GetComponent<PlayerCombat>().blueFireInterval > 0.1f)
+                {
+                    this.gameObject.GetComponent<PlayerCombat>().attackInterval -= 0.1f;
+                }
+                else
+                {
+                    healthController.SetHealth(healthController.maxHealth);
+                    currentHealth = maxHealth;
+                }
+            }
         }
     }
 }
