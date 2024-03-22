@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private int maxHealth = 12;
     private int currentHealth;
     private ExperienceController experienceController;
-    private int maxExperience = 1000;
+    private int maxExperience;
     private int currentExperience;
     private FadingText LevelUpMsg;
     private SpriteRenderer spriteRenderer;
@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
         experienceController = GameObject.Find("ExperienceBar").GetComponent<ExperienceController>();
         experienceController.SetExperience(0);
         currentExperience = 0;
+        maxExperience = experienceController.maxExperience;
+        Debug.Log("Max XP: " + maxExperience);
         // Set up level up message
         LevelUpMsg = GameObject.Find("LevelUpMessage").GetComponent<FadingText>();
         currentLevel = 0;
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if (elapsedTime - lastHealing >= 10.0)
         {
-            playerHealing();
+            PlayerHealing();
             lastHealing = elapsedTime;
         }
     }
@@ -123,7 +125,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void playerHealing()
+    public void PlayerHealing()
     {
         currentHealth += 1;
         healthController.SetHealth(currentHealth);
@@ -148,10 +150,12 @@ public class PlayerController : MonoBehaviour
         healthController.AddHeart();
         //maxHealth = maxHealth + 2;
         healthController.SetHealth(healthController.maxHealth);
-        currentHealth = healthController.maxHealth;
 
         currentLevel++;
 
+        experienceController.IncresedExperience();
+        maxExperience = experienceController.maxExperience;
+        // Debug.Log("Max XP: " + maxExperience);
         experienceController.SetExperience(0);
         currentExperience = 0;
 
