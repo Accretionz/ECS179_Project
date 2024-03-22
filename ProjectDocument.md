@@ -89,7 +89,7 @@ The player health bar displays player health in the upper left corner. The [`hea
 
 The experience bar displays the current experience in the top center of the screen. The player can gain experience by killing different types of enemies. A crow is worth 100, a bat is worth 200 and a boss is worth 500. The [`experience controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/ExperienceController.cs) is designed to keep track of the status of the experience bar. There are a total of 9 statuses for the bar besides empty and full status. The bar will display the correct image based on the ratio of the current experience to the maximum experience. Maximum experience is increasing as the game level goes up. More experience is required to reach the next level.
 
-**Level System**
+**Leveling System**
 
 When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
 
@@ -164,11 +164,16 @@ Initially the style for this game was dark fantasy and the map would be dark for
 - [PAUSE MENU in Unity](https://www.youtube.com/watch?v=JivuXdrIHK0) by Brackeys.
 
 
-## Gameplay Testing
+## Gameplay Testing - Maggie Kuang
 
 **Add a link to the full results of your gameplay tests.**
 
-**Summarize the key findings from your gameplay tests.**
+**Demo Version**
+- Since our game concept is not quite complex, players were able to easily understand what they are doing and how to make choices in the game, etc dodging the enemies and attacking enemies to gain experience. Therefore we decided to not provide the instruction at the beginning of the game.
+- In our demo version, the main character only had one type of attack effect. Most players died fast because of the slow attacking speed.
+- Players tended to only dodge the enemies instead of attacking due to the slow attacking speed and the fast moving speed of the main character compared to the speed of enemies. 
+- To balance the ability of the main character and enemies, we lowered the moving speed of the main character and also added two more attacking effects: fireballs and blue fire. To connect with the leveling system, more attack effects will be enabled as the level goes up.
+
 
 ## Narrative Design - Ryan Tan
 
