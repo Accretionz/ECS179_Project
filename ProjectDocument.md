@@ -96,6 +96,8 @@ When the game level goes up, a fading notification says "Level UP!" will show un
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 
+The player movement is usage of the basic wasd or arrow keys that allows the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game are mainly usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
+
 ## Animation and Visuals
 
 **List your assets, including their sources and licenses.**
