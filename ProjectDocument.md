@@ -104,6 +104,7 @@ When the game level goes up, a fading notification says "Level UP!" will show un
 
 **Player**
 - [Satyr](https://lucky-loops.itch.io/character-satyr)
+  
 **Mobs**
 - [Melee Crow Mob](https://gabry-corti.itch.io/plague-crow)
 - [Ranged Bat Mob](https://gabry-corti.itch.io/assassin-bat)
