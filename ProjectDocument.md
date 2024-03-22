@@ -42,10 +42,14 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
 - Week 3:
   - Meeting to discuss current progress and whether we're on track for the deadline. Determining which features to focus on.
   - Organized the first progress report between the two groups and facilitated conversation
+    ![Screenshot 2024-03-22 152440](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/a7e8ba43-57a0-4349-bdcb-1408b0a224e5)
+
 - Week 4:
   - Implementation of a timer system and UI for the timer.
   - Used timer to increase difficulty of enemies and provide passive regen for player.
   - Organized the second progress report between the two groups and facilitated conversation
+    ![Screenshot 2024-03-22 152402](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/de31982d-dbe4-4068-8ce5-abb80c8883f7)
+
 - Week 5:
   - Two meetings where the team got together to put together an almost finised version of the game and fix any merging problems.
   - Discuss any balancing issues that needed to be implemented for the game to feel better when playing
