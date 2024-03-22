@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private float lastHorizontalInput;
     private float elapsedTime;
     private float lastHealing;
+    public static int currentLevel;
 
 
     void Awake()
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        currentSpeed = 3f; // Initialize speed
+        currentSpeed = 1.5f; // Initialize speed
 
         if(!rb)
         {
@@ -51,15 +52,7 @@ public class PlayerController : MonoBehaviour
         currentExperience = 0;
         // Set up level up message
         LevelUpMsg = GameObject.Find("LevelUpMessage").GetComponent<FadingText>();
-        if(LevelUpMsg)
-        {
-            Debug.Log(LevelUpMsg.name);
-        }
-        else
-        {
-            Debug.Log("Not found");
-        }
-       
+        currentLevel = 0;
     }
 
     void Update()
@@ -155,12 +148,23 @@ public class PlayerController : MonoBehaviour
         healthController.AddHeart();
         //maxHealth = maxHealth + 2;
         healthController.SetHealth(healthController.maxHealth);
+        currentHealth = healthController.maxHealth;
 
-        // currentLevel++
+        currentLevel++;
+
         experienceController.SetExperience(0);
         currentExperience = 0;
 
         // Show the level up message
         LevelUpMsg.IsFadingIn(true);
+
+        if (currentLevel >= 2)
+        {
+            this.gameObject.GetComponent<PlayerCombat>().ActivateFireball();
+        }
+        if (currentLevel >= 4)
+        {
+            this.gameObject.GetComponent<PlayerCombat>().ActivateBlueFire();
+        }
     }
 }

@@ -10,10 +10,14 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] public float attackRange = 0.5f;
 
     [SerializeField] public float attackInterval = 2.0f;
-    private float currentTime = 0.0f;
+    [SerializeField] public float blueFireInterval = 1.5f;
+    private float defaultAttackTime = 0.0f;
+    private float blueFireSpellTime = 0.0f;
     [SerializeField] public int attackDamage = 100;
+    [SerializeField] public GameObject blueFirePrefab;
     [SerializeField] public GameObject fireballPrefab;
-    [SerializeField] public bool fireballActive = true;
+    [SerializeField] public bool fireballActive = false;
+    [SerializeField] public bool blueFireActive = false;
     [SerializeField] public int maxFireBalls = 2;
     private int numFireballs = 0;
     public LayerMask enemyLayers;
@@ -26,10 +30,11 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime += Time.deltaTime;
-        if (currentTime >= attackInterval)
+        defaultAttackTime += Time.deltaTime;
+        blueFireSpellTime += Time.deltaTime;
+        if (defaultAttackTime >= attackInterval)
         {
-            currentTime = 0.0f;
+            defaultAttackTime = 0.0f;
             Attack();
             if (fireballActive)
             {
@@ -37,9 +42,18 @@ public class PlayerCombat : MonoBehaviour
                 {
                     numFireballs += 1;
                     var playerPosition = this.gameObject.transform.position;
+                    AudioManager.instance.PlaySoundEffects("FireSpell");
                     Instantiate(fireballPrefab, new Vector3(playerPosition.x, playerPosition.y + 1, playerPosition.z), Quaternion.identity);
                 }
             } 
+        }
+        if (blueFireSpellTime >= blueFireInterval)
+        {
+            blueFireSpellTime = 0.0f;
+            if(blueFireActive)
+            {
+                BlueFireAttack();
+            }
         }
     }
 
@@ -60,6 +74,20 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    void BlueFireAttack()
+    {
+        var playerPosition = this.gameObject.transform.position;
+        var topRightRotation = Quaternion.AngleAxis(225, Vector3.forward);
+        var topLeftRotation = Quaternion.AngleAxis(315, Vector3.forward);
+        var bottomLeftRotation = Quaternion.AngleAxis(45, Vector3.forward);
+        var bottomRightRotation = Quaternion.AngleAxis(135, Vector3.forward);
+        AudioManager.instance.PlaySoundEffects("BlueSpell");
+        Instantiate(blueFirePrefab, new Vector3(playerPosition.x + 0.1f, playerPosition.y + 0.1f, playerPosition.z), topRightRotation);
+        Instantiate(blueFirePrefab, new Vector3(playerPosition.x - 0.1f, playerPosition.y + 0.1f, playerPosition.z), topLeftRotation);
+        Instantiate(blueFirePrefab, new Vector3(playerPosition.x + 0.1f, playerPosition.y - 0.1f, playerPosition.z), bottomRightRotation);
+        Instantiate(blueFirePrefab, new Vector3(playerPosition.x - 0.1f, playerPosition.y - 0.1f, playerPosition.z), bottomLeftRotation);
+    }
+
     void OnDrawGizmosSelected()
     {
         if(attackPoint == null)
@@ -67,5 +95,15 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.transform.position, attackRange);
+    }
+
+    public void ActivateFireball()
+    {
+        fireballActive = true;
+    }
+
+    public void ActivateBlueFire()
+    {
+        blueFireActive = true;
     }
 }
