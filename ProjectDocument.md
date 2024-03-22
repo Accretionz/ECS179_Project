@@ -1,4 +1,4 @@
-# Hollow Survivor #
+# Game Basic Information #
 
 ## Summary ##
 
