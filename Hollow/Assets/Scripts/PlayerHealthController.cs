@@ -25,6 +25,10 @@ public class PlayerHealthController : MonoBehaviour
     {
         numOfHeart++;
         maxHealth = maxHealth + 2;
+        if(maxHealth >= 20)
+        {
+            maxHealth = 20;
+        }
     }
     
     public void SetHealth(int health)

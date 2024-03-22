@@ -77,6 +77,7 @@ public class BatController : MobController
     {
         Debug.Log("Enemy died!");
         animator.SetBool("isDead", true);
+        player.GetComponent<PlayerController>().ExperienceChange(200);
         Destroy(gameObject, 0.52f);
 
         // Destroy(gameObject);

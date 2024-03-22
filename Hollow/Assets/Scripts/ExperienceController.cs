@@ -39,53 +39,59 @@ public class ExperienceController : MonoBehaviour
         }
     }
 
-    public void AddExperience(int amount)
+    // Everytime when player level up, 200 more XP is needed to reach the next level
+    public void IncresedExperience()
     {
-        // ?. safeguard from null
-        OnExperienceChange?.Invoke(amount);
+        maxExperience += 200;
+        Debug.Log("Ah! Max XP: " + maxExperience);
     }
-
     public void SetExperience(int experience)
     {
         currentExperience = experience;
-        switch(currentExperience)
+        if(currentExperience == 0)
         {
-            case 0:
-                experienceBar.sprite = empty;
-                break;
-            case 100:
-                experienceBar.sprite = one;
-                break;
-            case 200:
-                experienceBar.sprite = two;
-                break;
-            case 300:
-                experienceBar.sprite = three;
-                break;
-            case 400:
-                experienceBar.sprite = four;
-                break;
-            case 500:
-                experienceBar.sprite = five;
-                break;
-            case 600:
-                experienceBar.sprite = six;
-                break;
-            case 700:
-                experienceBar.sprite = seven;
-                break;
-            case 800:
-                experienceBar.sprite = eight;
-                break;
-            case 900:
-                experienceBar.sprite = nice;
-                break;
-            case 1000:
-                experienceBar.sprite = full;
-                break;
-            default:
-                Debug.Log("Error in experience computation!");
-                break;
+            experienceBar.sprite = empty;
         }
+        else if(currentExperience >= maxExperience)
+        {
+            experienceBar.sprite = full;
+        }
+        else if(currentExperience >= 0.9 * maxExperience)
+        {
+            experienceBar.sprite = nice;
+        }
+        else if(currentExperience >= 0.8 * maxExperience)
+        {
+            experienceBar.sprite = eight;
+        }
+        else if(currentExperience >= 0.7 * maxExperience)
+        {
+            experienceBar.sprite = seven;
+        }
+        else if(currentExperience >= 0.6 * maxExperience)
+        {
+            experienceBar.sprite = six;
+        }
+        else if(currentExperience >= 0.5 * maxExperience)
+        {
+            experienceBar.sprite = five;
+        }
+        else if(currentExperience >= 0.4 * maxExperience)
+        {
+            experienceBar.sprite = four;
+        }
+        else if(currentExperience >= 0.3 * maxExperience)
+        {
+            experienceBar.sprite = three;
+        }
+        else if(currentExperience >= 0.2 * maxExperience)
+        {
+            experienceBar.sprite = two;
+        }
+        else if(currentExperience >= 0.1 * maxExperience)
+        {
+            experienceBar.sprite = one;
+        }
+        
     }
 }
