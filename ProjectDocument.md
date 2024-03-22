@@ -64,9 +64,10 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
   - Held three in-person meetings where we took the current progress of all team members and tried compiling it into one game and fixing any bugs that arose.
 - Assisted in creation of the player object as well as implementation of the movement system accompanying the sprite animation changes.
 
-## User Interface and Input - Maggie, Jingdan
+## User Interface and Input - Maggie Kuang, Jingdan Hu
 
-**Maggie**
+**Maggie**  
+
 **Main Menu and Death Scene**
 
 ![Game Over Scene](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/a096846b-2506-4d51-9c30-48045ea3b0a7)
@@ -77,13 +78,13 @@ The main menu contains the game title, the start button, and the quit button. Al
 
 When the player has zero health, the death scene will loaded. The death scene contains the restart button to let the player back to the game and the quit button to quit the game.
 
-**Player Health Bar**
+**Player Health System**
 
 ![Health Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/6f632ca8-1453-4578-9d30-f7021fee201f)
 
 The player health bar displays player health in the upper left corner. The [`health controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/PlayerHealthController.cs) script is designed to define the initial health, max health, and functions that can implement the health changes throughout the game. Based on current health, the bar would display the correct number of full, half, and empty hearts. Half of a heart will be gone when an enemy or a projectile damages the player.
 
-**Player Experience Bar**
+**Player Experience System**
 
 ![XP Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/93b2c803-c077-4513-bd85-5b2d2219704b)
 
@@ -99,7 +100,7 @@ When the game level goes up, a fading notification says "Level UP!" will show un
 **Music Control Panel/Pause Panel**
 ![Music Control Panel](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638)
 
-The pause panel will be poped up when the player click the upper right corner button. There are corresponding button and slider for adjusting background music and soundeffect. The 'SoundPanel.cs' is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other Ui elements, each button has two layer, a red box as background and a matching color icon above it.  
+The pause panel will pop up when the player clicks the upper right corner button. There are corresponding buttons and slider for adjusting background music and sound effects. The 'SoundPanel.cs' is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other UI elements, each button has two layers, a red box as background and a matching color icon above it.  
 
 **Resouces Used**  
 [Font](https://nimblebeastscollective.itch.io/magosfonts)  
@@ -141,6 +142,7 @@ We did not have a specific design pattern as most of our parts were done individ
 # Sub-Roles 
 
 ## Audio - Jingdan
+
 Initially the style for this game was dark fantasy and the map would be dark forest or underground caves so I chose a bit creepy bgm. After we have the forest map settled, I chose a lighter bgm used in battle scene. The bgm for start menu and dead scene is a little more upbeat. Sound effects for button, player, and enemies are from various asset packs listed below. The audio manager was initially adopted from Exercise 4 but has been modified to better control the music control panel. I only implemented the audio manager in main battle scene and use Audio Source for main menu scene and dead scene. To solve the bgm overlap problem, I use 'AudioManager.instance.bgmSource.Stop();' once the playe is dead and move to dead scene.
 
 **Assets**
@@ -169,6 +171,7 @@ Initially the style for this game was dark fantasy and the map would be dark for
 **Add a link to the full results of your gameplay tests.**
 
 **Demo Version**
+
 - Since our game concept is not quite complex, players were able to easily understand what they are doing and how to make choices in the game, etc dodging the enemies and attacking enemies to gain experience. Therefore we decided to not provide the instruction at the beginning of the game.
 - In our demo version, the main character only had one type of attack effect. Most players died fast because of the slow attacking speed.
 - Players tended to only dodge the enemies instead of attacking due to the slow attacking speed and the fast moving speed of the main character compared to the speed of enemies. 
