@@ -95,8 +95,9 @@ When the game level goes up, a fading notification says "Level UP!" will show un
 
 
 **Jingdan**
+
 **Music Control Panel/Pause Panel**
-![Music Control Panel](<img width="940" alt="Screenshot 2024-03-22 at 12 46 42 PM" src="https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638">)
+![Music Control Panel](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638)
 
 The pause panel will be poped up when the player click the upper right corner button. There are corresponding button and slider for adjusting background music and soundeffect. The 'SoundPanel.cs' is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other Ui elements, each button has two layer, a red box as background and a matching color icon above it.  
 
@@ -143,6 +144,7 @@ We did not have a specific design pattern as most of our parts were done individ
 Initially the style for this game was dark fantasy and the map would be dark forest or underground caves so I chose a bit creepy bgm. After we have the forest map settled, I chose a lighter bgm used in battle scene. The bgm for start menu and dead scene is a little more upbeat. Sound effects for button, player, and enemies are from various asset packs listed below. The audio manager was initially adopted from Exercise 4 but has been modified to better control the music control panel. I only implemented the audio manager in main battle scene and use Audio Source for main menu scene and dead scene. To solve the bgm overlap problem, I use 'AudioManager.instance.bgmSource.Stop();' once the playe is dead and move to dead scene.
 
 **Assets**
+
 ***Bgm***
 - [For main menu scene and dead scene](https://oscarj.itch.io/to-share) using #35
 - [For main battle scene](https://isiahgames.itch.io/super-hero-mini-music-pack)  using Enlightened Mind.
