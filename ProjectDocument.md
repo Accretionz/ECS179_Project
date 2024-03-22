@@ -66,9 +66,7 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
 
 ## User Interface and Input - Maggie Kuang, Jingdan Hu
 
-**Maggie**  
-
-**Main Menu and Death Scene**
+**Main Menu and Death Scene - Maggie Kuang**
 
 ![Game Over Scene](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/a096846b-2506-4d51-9c30-48045ea3b0a7)
 
@@ -78,19 +76,19 @@ The main menu contains the game title, the start button, and the quit button. Al
 
 When the player has zero health, the death scene will loaded. The death scene contains the restart button to let the player back to the game and the quit button to quit the game.
 
-**Player Health System**
+**Player Health System - Maggie Kuang**
 
 ![Health Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/6f632ca8-1453-4578-9d30-f7021fee201f)
 
 The player health bar displays player health in the upper left corner. The [`health controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/PlayerHealthController.cs) script is designed to define the initial health, max health, and functions that can implement the health changes throughout the game. Based on current health, the bar would display the correct number of full, half, and empty hearts. Half of a heart will be gone when an enemy or a projectile damages the player.
 
-**Player Experience System**
+**Player Experience System -  Maggie Kuang**
 
 ![XP Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/93b2c803-c077-4513-bd85-5b2d2219704b)
 
 The experience bar displays the current experience in the top center of the screen. The player can gain experience by killing different types of enemies. A crow is worth 100, a bat is worth 200 and a boss is worth 500. The [`experience controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/ExperienceController.cs) is designed to keep track of the status of the experience bar. There are a total of 9 statuses for the bar besides empty and full status. The bar will display the correct image based on the ratio of the current experience to the maximum experience. Maximum experience is increasing as the game level goes up. More experience is required to reach the next level.
 
-**Leveling System**
+**Leveling System - Maggie Kuang**
 
 When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
 
@@ -110,7 +108,7 @@ The pause panel will pop up when the player clicks the upper right corner button
 
 ## Movement/Physics - Ryan, Jacky, Daniel, Jingdan
 
-The player movement is usage of the basic wasd or arrow keys that allows the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game are mainly usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
+The player movement is the usage of the basic WASD or arrow keys that allow the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game is mainly the usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
 
 **Enemy AI - Ryan**
 
@@ -175,7 +173,9 @@ Initially the style for this game was dark fantasy and the map would be dark for
 - Since our game concept is not quite complex, players were able to easily understand what they are doing and how to make choices in the game, etc dodging the enemies and attacking enemies to gain experience. Therefore we decided to not provide the instruction at the beginning of the game.
 - In our demo version, the main character only had one type of attack effect. Most players died fast because of the slow attacking speed.
 - Players tended to only dodge the enemies instead of attacking due to the slow attacking speed and the fast moving speed of the main character compared to the speed of enemies. 
-- To balance the ability of the main character and enemies, we lowered the moving speed of the main character and also added two more attacking effects: fireballs and blue fire. To connect with the leveling system, more attack effects will be enabled as the level goes up.
+- To balance the ability of the main character and enemies, we lowered the moving speed of the main character and also added two more attacking effects: fireballs and blue fire. Connected with the leveling system, more types of enemies will show up and more attack effects will be enabled as the level goes up.
+
+**Final Version**
 
 
 ## Narrative Design - Ryan Tan
