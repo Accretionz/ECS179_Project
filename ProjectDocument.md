@@ -103,21 +103,23 @@ When the game level goes up, a fading notification says "Level UP!" will show un
 
 
 **Player**
-[Satyr](https://lucky-loops.itch.io/character-satyr)
+- [Satyr](https://lucky-loops.itch.io/character-satyr)
 **Mobs**
-[Melee Crow Mob](https://gabry-corti.itch.io/plague-crow)
-[Ranged Bat Mob](https://gabry-corti.itch.io/assassin-bat)
-[Boss Mob](https://assetstore.unity.com/packages/2d/characters/bringer-of-death-free-195719)
+- [Melee Crow Mob](https://gabry-corti.itch.io/plague-crow)
+- [Ranged Bat Mob](https://gabry-corti.itch.io/assassin-bat)
+- [Boss Mob](https://assetstore.unity.com/packages/2d/characters/bringer-of-death-free-195719)
 **Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
 
 ## Game Logic - Ryan Tan
 
 **Enemy AI**
+
 This game is all about massive hordes of mobs swarming the player. To accomplish this I decided to use [NavMeshPlus](https://github.com/h8man/NavMeshPlus?tab=readme-ov-file) which is a 2D pathfinding system. Using NavMesh for the enemy AI was very helpful as the map we decided to use had a lot of terrain. Using NavMesh you can designate terrain as nonwalkable and have an easy solution for the enemies to path intelligently towards the player while avoiding terrain.
 
 [![EnemyPathFind](ExampleImage/enemy_ai.png)](https://github.com/Accretionz/Hollow-Survivor/blob/916b209df54d9b49bd89a2c377cb7cac9730f2bf/ExampleImage/enemy_ai.png)
 
 **Design Pattern**
+
 We did not have a specific design pattern as most of our parts were done individually and then pieced together. The main bulk of the game are in the prefabs. This is how the enemy mobs and player attacks are generated and used in the game. Each prefab has their own designated controller to control their attack patterns and behaviour.
  
 
