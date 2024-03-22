@@ -25,8 +25,6 @@ Rogue Hollow takes place in a grim fantasy world where the player, a mysterious 
 
 # Main Roles #
 
-## Producer - Jacky Liu
-
 *Short Description* - Long description of your work item that includes how it is relevant to topics discussed in class. [link to evidence in your repository](https://github.com/dr-jam/ECS189L/edit/project-description/ProjectDocumentTemplate.md)
 
 Here is an example:  
@@ -34,9 +32,17 @@ Here is an example:
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
-## Producer
+## Producer - Jacky Liu
 
-**Describe the steps you took in your role as producer. Typical items include group scheduling mechanisms, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, dependency/task tracking, Gantt charts, etc.), and repository management methodology.**
+- Organized a team of skilled programmers in an attempt to create a fun and playable game.
+  - Roles were assigned based on preferences for the most part.
+- Setting up a discord server where communication between the team can be easy and effective.
+  - Having different channels that correspond to different components of the project like an assests channel.
+- Setting up the github page as an effective way for the team to push and pull changes done by other team memebers.
+  - Usage of branches to provide a more organized structure and allow for changes to be made without altering the master branch (but a pain to remerge)
+- Usage of [whentomeet](https://www.when2meet.com/?24178901-VsgTi) to organize weekly check-in meetings with the group.
+  - Some meetings were held online as it was to get the groups collective input regarding the progress and steps needed to take moving forward.
+  - Held three in-person meetings where we took the current progress of all team members and tried compiling it into one game and fixing any bugs that arose.
 
 ## User Interface and Input
 
