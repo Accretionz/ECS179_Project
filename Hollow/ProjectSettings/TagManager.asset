@@ -8,6 +8,7 @@ TagManager:
   - UI
   - Terrain
   - Teleport
+  - Teleport2
   layers:
   - Default
   - TransparentFX
