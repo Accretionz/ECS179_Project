@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    public GameObject heart;
+    public GameObject spell;
     private bool canOpen;
     private bool isOpened;
     private Animator anim;
@@ -27,14 +27,14 @@ public class Chest : MonoBehaviour
             {
                 anim.SetTrigger("Opening");
                 isOpened = true;
-                Invoke("GenHeart", delayTime);
+                Invoke("GenSpell", delayTime);
             }
         }
     }
 
-    void GenHeart()
+    void GenSpell()
     {
-        Instantiate(heart, transform.position, Quaternion.identity);
+        Instantiate(spell, transform.position, Quaternion.identity);
     }
 
     // When player touch the chest
