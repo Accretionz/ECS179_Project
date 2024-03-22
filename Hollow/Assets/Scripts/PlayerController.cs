@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         // Timer system
         elapsedTime += Time.deltaTime;
-        if (elapsedTime - lastHealing >= 10.0)
+        if (elapsedTime - lastHealing >= 15.0)
         {
             PlayerHealing();
             lastHealing = elapsedTime;
@@ -148,8 +148,9 @@ public class PlayerController : MonoBehaviour
     {
         // each higher level gives player one more heart
         healthController.AddHeart();
-        //maxHealth = maxHealth + 2;
-        healthController.SetHealth(healthController.currentHealth);
+        maxHealth = healthController.maxHealth;
+        currentHealth = currentHealth + 2;
+        healthController.SetHealth(currentHealth);
 
         currentLevel++;
 
@@ -161,7 +162,7 @@ public class PlayerController : MonoBehaviour
 
         // Show the level up message
         LevelUpMsg.IsFadingIn(true);
-        
+
         if (currentLevel >= 2)
         {
             this.gameObject.GetComponent<PlayerCombat>().ActivateFireball();
@@ -170,49 +171,5 @@ public class PlayerController : MonoBehaviour
         {
             this.gameObject.GetComponent<PlayerCombat>().ActivateBlueFire();
         }
-        
-        if (currentLevel >= 6)
-        {
-            int num = Random.Range(0, 4);
-            if (num == 0)
-            {
-                if (this.gameObject.GetComponent<PlayerCombat>().maxFireBalls < 5)
-                {
-                    this.gameObject.GetComponent<PlayerCombat>().maxFireBalls++;
-                }
-                else
-                {
-                    this.gameObject.GetComponent<PlayerCombat>().maxFireBalls = 8;
-                }
-            }else if (num == 1)
-            {
-                if (this.gameObject.GetComponent<PlayerCombat>().blueFireInterval > 0.8f)
-                {
-                    this.gameObject.GetComponent<PlayerCombat>().blueFireInterval -= 0.1f;
-                }
-                else 
-                {
-                    this.gameObject.GetComponent<PlayerCombat>().blueFireInterval = 0.5f;
-                }
-            }
-            else if (num == 2)
-            {
-                this.gameObject.GetComponent<PlayerCombat>().attackRange += 0.1f;
-            }
-            else
-            {
-                if (this.gameObject.GetComponent<PlayerCombat>().blueFireInterval > 0.1f)
-                {
-                    this.gameObject.GetComponent<PlayerCombat>().attackInterval -= 0.1f;
-                }
-                else
-                {
-                    healthController.SetHealth(healthController.maxHealth);
-                    currentHealth = maxHealth;
-                }
-
-            }
-        }
-
     }
 }
