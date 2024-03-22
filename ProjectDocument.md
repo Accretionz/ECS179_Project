@@ -52,6 +52,7 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
 
 - Setting up a discord server where communication between the team can be easy and effective.
   - Having different channels that correspond to different components of the project like an assests channel.
+    ![Screenshot 2024-03-22 152149](https://github.com/Accretionz/Hollow-Survivor/assets/156376194/694920c9-1b27-43b3-b251-67b7c557af90)
 - Setting up the github page as an effective way for the team to push and pull changes done by other team memebers.
   - Usage of branches to provide a more organized structure and allow for changes to be made without altering the master branch (but a pain to remerge)
 - Usage of [whentomeet](https://www.when2meet.com/?24178901-VsgTi) to organize weekly check-in meetings with the group.
