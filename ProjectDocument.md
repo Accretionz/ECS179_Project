@@ -71,7 +71,7 @@ Organized a team of skilled programmers in an attempt to create a fun and playab
 
 ![Game Over Scene](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/a096846b-2506-4d51-9c30-48045ea3b0a7)
 
-The main menu contains the game title, the start button, and the quit button. All the buttons have a hover effect that deepens the color when the player hovers over them. When the start button is pressed, the [`main menu script`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/MainMenu.cs) allows the player to jump to the game scene to start playing. When the quit button is pressed, the game will stop the quit.
+The main menu contains the game title, start button, and quit button. All the buttons have a hover effect that deepens the color when the player hovers over them. When the start button is pressed, the [`main menu script`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/MainMenu.cs) allows the player to jump to the game scene and start playing. When the quit button is pressed, the game will stop and quit.
 
 ![Main Menu](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/c94e9d49-38d0-474e-8ebb-f7c005b9d7bd)
 
@@ -87,11 +87,11 @@ The player health bar displays player health in the upper left corner. The [`hea
 
 ![XP Bar](https://github.com/Accretionz/Hollow-Survivor/assets/71859255/93b2c803-c077-4513-bd85-5b2d2219704b)
 
-The experience bar displays the current experience in the top center of the screen. The player can gain experience by killing different types of enemies. A crow is worth 100, a bat is worth 200 and a boss is worth 500. The [`experience controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/ExperienceController.cs) is designed to keep track of the status of the experience bar. There are a total of 9 statuses for the bar besides empty and full status. The bar will display the correct image based on the ratio of the current experience to the maximum experience. Maximum experience is increasing as the game level goes up. More experience is required to reach the next level.
+The experience bar displays the current experience at the top center of the screen. The player can gain experience by killing different types of enemies. A crow is worth 100, a bat is worth 200 and a boss is worth 500. The [`experience controller`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/ExperienceController.cs) is designed to keep track of the status of the experience bar. There are a total of 9 statuses for the bar besides empty and full status. The bar will display the correct image based on the ratio of the current experience to the maximum experience. Maximum experience is increasing as the game level goes up. More experience is required to reach the next level.
 
 **Leveling System - Maggie Kuang**
 
-When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
+When the game level goes up, a fading message saying "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the message shows, the level counter would increase by 1.
 
 
 **Music Control Panel/Pause Panel - Jingdan Hu**
@@ -205,12 +205,17 @@ Initially the style for this game was dark fantasy and the map would be dark for
 
 **Demo Version**
 
-- Since our game concept is not quite complex, players were able to easily understand what they are doing and how to make choices in the game, etc dodging the enemies and attacking enemies to gain experience. Therefore we decided to not provide the instruction at the beginning of the game.
+- Players think our overall of the game has a unified art style.
+- Players were able to easily understand what they were doing and how to make choices in the game, for example dodging the enemies and attacking enemies to gain experience. Therefore we decided to not provide the instruction at the beginning of the game.
 - In our demo version, the main character only had one type of attack effect. Most players died fast because of the slow attacking speed.
 - Players tended to only dodge the enemies instead of attacking due to the slow attacking speed and the fast moving speed of the main character compared to the speed of enemies. 
 - To balance the ability of the main character and enemies, we lowered the moving speed of the main character and also added two more attacking effects: fireballs and blue fire. Connected with the leveling system, more types of enemies will show up and more attack effects will be enabled as the level goes up.
 
 **Final Version**
+
+- Some players found satisfying when the main character has more attacking effects that can kill enemies at a long distance.
+- Players thought we could make the main character attack manually so the game control could be richer.
+- Players felt a bit bored when the game lasted long and they didn't die. To make the game more challenging, we changed the setting of players getting full health after leveling up. Now level up only heals one heart.
 
 
 ## Narrative Design - Ryan Tan
