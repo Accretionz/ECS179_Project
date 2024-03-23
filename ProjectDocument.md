@@ -145,16 +145,17 @@ following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D anim
 
 **Treasure-box-finding scene - Jingdan**
 
-To increase playability, I planned to created a chest-finding scene for player to find treasure box in a dim environment by implementing the lighting system. However, the original forest map is too big for having lights here and there, so I decided to create another map by using different sytle tiles. I eventually created two new scenes in inferno style as treasure-box-finding scenes that allow player to find treasure box and gain a new sbell. After reaching level 2 and level 6, player will be teleported to these NewChestScenes and need to
-reach to the treasure box, pressing `Q` to open the box and gain the spell within certain time. After opening the box, player can teleport back to the battle scene using the yellow fire entrance near the treasure box. 
+To increase playability, we planned to created a chest-finding scene for player to find treasure box in a dim environment by implementing the lighting system. However, the original forest map is too big for having lights here and there, so I decided to create another map by using different sytle tiles. I eventually created two new scenes in inferno style as treasure-box-finding scenes that allow player to find treasure box and gain a new sbell. After reaching level 2 and level 4, player will be teleported to these NewChestScenes and need to reach to the treasure box, pressing `Q` to open the box and gain the spell within certain time. 
 
-[treasure-finding-scene testing display](https://www.youtube.com/watch?v=2j7l1JNU-jM)
+Here is the video displaying how the player will immediately drump to the chest-finding scene when the level reached 2: [treasure-finding-scene testing display](https://www.youtube.com/watch?v=2j7l1JNU-jM)
 
 
 ![Image 1](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/ba283a76-353f-4752-94f1-6f519da763f8)
 ![Image 2](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/a7c81556-cfaf-468a-850d-ede650bda6c2)
 
-The inferno style maps match the forest style map in battle scene since the tiles are from the same sprite assets. I even have the rocks designed as the style of `CS` and `179` as an Easter egg in the game. However, due to limited time, I wasn't able to get the player back to the battle scene with all the data like currentHealth and currentExperience saved. Therefore, all the progress were saved in branch `light_chest_try` but not pushed to the master branch and were not shown in the game. 
+In these scenes, there will not be any enemies and player will only have WASD movements to move around the map to find a treasure box. When the player get close to the treasure box, he can open it by pressing `Q` and then the the image of the spell will be poped up from the box. When player get closer to the yellow fire-like teleport and collision is detected, the player will be teleported back to the battle scene. 
+The inferno style maps match the forest style map in battle scene since the tiles are from the same sprite assets. Each map has two layers, one for the background and another for the rocks as colliders. Rocks are built in a rerectangle shape to stop the player moving outside of the map and the background was extended so when the camera move around, area outsider the map woun't be displayed. The rocks insider the map were designed as the shapes of `CS` and `179` as an Easter egg in the game. An oranger note is displayed in the upper middle of the scree all time showing players what they need to do in the scenes. The fire-like teleport is always near the treasure box. Each treasure box has different locations. A count down timer controlled by the `CountDownTimer` script is displayed at the bottom of the screen. 
+Due to limited time, I wasn't able to get the player back to the battle scene with all the data like currentHealth and currentExperience saved. Therefore, all the progress were saved in branch `light_chest_try` but has not pushed to the master branch and were not shown in the game. 
 
 
 **Asset Sources:**
