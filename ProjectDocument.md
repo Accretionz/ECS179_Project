@@ -94,12 +94,13 @@ The experience bar displays the current experience in the top center of the scre
 When the game level goes up, a fading notification says "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the notification shows, the level counter would increase by 1.
 
 
-**Jingdan**
+**Music Control Panel/Pause Panel - Jingdan Hu**
 
-**Music Control Panel/Pause Panel**
+[music panel testing display](https://www.youtube.com/watch?v=OjiItP0xy8s)
+
 ![Music Control Panel](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638)
 
-The pause panel will pop up when the player clicks the upper right corner button. There are corresponding buttons and slider for adjusting background music and sound effects. The 'SoundPanel.cs' is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other UI elements, each button has two layers, a red box as background and a matching color icon above it.  
+The pause panel will pop up when the player clicks the upper right corner button. There are corresponding buttons and slider for adjusting background music and sound effects. The `SoundPanel.cs` is used to control the buttons and sliders as well as for the setting button to awake the pause panel and the Return button to exit the panel and resume the game. To match the style of other UI elements, each button has two layers, a red box as background and a matching color icon above it.  
 
 **Resouces Used**  
 [Font](https://nimblebeastscollective.itch.io/magosfonts)  
@@ -111,7 +112,7 @@ The pause panel will pop up when the player clicks the upper right corner button
 
 The player movement is the usage of the basic WASD or arrow keys that allow the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game is mainly the usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
 
-**Enemy AI - Ryan**
+**Enemy AI - Ryan Tan**
 
 This game is all about massive hordes of mobs swarming the player. To accomplish this I decided to use [NavMeshPlus](https://github.com/h8man/NavMeshPlus?tab=readme-ov-file) which is a 2D pathfinding system. Using NavMesh for the enemy AI was very helpful as the map we decided to use had a lot of terrain. Using NavMesh you can designate terrain as nonwalkable and have an easy solution for the enemies to path intelligently towards the player while avoiding terrain.
 
@@ -127,7 +128,22 @@ This game is all about massive hordes of mobs swarming the player. To accomplish
 following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D animation tutorial when first learning how Unity animation worked. After that, it was fairly straightforward to implemented animations that came with our outsourced assets into our game. In the end, most of us ended up learning and implementing some animations along the way.
 
 *Combat System* - Although my main role was Animation and Visuals, I also ended up working on some parts of the Game Logic, mainly the player combat system in the [player combat script](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/PlayerCombat.cs), as we determined it was too big of a workload for one person. As such, I implemented all the attack animations used by the player. Although initially we had planned to give the player different weapons as they progressed through the game, we decided that instead the player's attacks would consist solely of spells. The first attack I implemented was the default horizontal slam-down attack that simulates an AoE melee attack. To do this I ended up adapting code used by [Brackeys](https://www.youtube.com/watch?v=sPiVz1k-fEs) in his melee combat tutorial for Unity. Afterwards, I was able to develop the other two spells that the player can unlock: the orbiting fireballs along with the [fireball controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/FireballController.cs) that damage any enemies they hit, as well as the four diagonal blue-fire blasts in [bluefire controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/BlueFireController.cs) that perform a similar effect. 
- 
+
+
+**Treasure-box-finding scene - Jingdan**
+
+To increase playability, I planned to created a chest-finding scene for player to find treasure box in a dim environment by implementing the lighting system. However, the original forest map is too big for having lights here and there, so I decided to create another map by using different sytle tiles. I eventually created two new scenes in inferno style as treasure-box-finding scenes that allow player to find treasure box and gain a new sbell. After reaching level 2 and level 6, player will be teleported to these NewChestScenes and need to
+reach to the treasure box, pressing `Q` to open the box and gain the spell within certain time. After opening the box, player can teleport back to the battle scene using the yellow fire entrance near the treasure box. 
+
+[treasure-finding-scene testing display](https://www.youtube.com/watch?v=2j7l1JNU-jM)
+
+
+![Image 1](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/ba283a76-353f-4752-94f1-6f519da763f8)
+![Image 2](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/a7c81556-cfaf-468a-850d-ede650bda6c2)
+
+The inferno style maps match the forest style map in battle scene since the tiles are from the same sprite assets. I even have the rocks designed as the style of `CS` and `179` as an Easter egg in the game. However, due to limited time, I wasn't able to get the player back to the battle scene with all the data like currentHealth and currentExperience saved. Therefore, all the progress were saved in branch `light_chest_try` but not pushed to the master branch and were not shown in the game. 
+
+
 **Asset Sources:**
 
 **Player**
@@ -142,6 +158,9 @@ following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D anim
 - [Default Attack Animation](https://nyknck.itch.io/attack-animation)
 - [Orbiting Fireball Animation + Blue Fire Spell Animation](https://bdragon1727.itch.io/free-effect-bullet-impact-explosion-32x32)
 
+**Treasure box**
+- [FREE: Chest Animations](https://admurin.itch.io/free-chest-animations)
+
 **Map**
 - [Terrain Assets + Background Tileset](https://quasilyte.itch.io/roboden-tileset)
 
@@ -155,7 +174,7 @@ We did not have a specific design pattern as most of our parts were done individ
 
 # Sub-Roles 
 
-## Audio - Jingdan
+## Audio - Jingdan Hu
 
 Initially the style for this game was dark fantasy and the map would be dark forest or underground caves so I chose a bit creepy bgm. After we have the forest map settled, I chose a lighter bgm used in battle scene. The bgm for start menu and dead scene is a little more upbeat. Sound effects for button, player, and enemies are from various asset packs listed below. The audio manager was initially adopted from Exercise 4 but has been modified to better control the music control panel. I only implemented the audio manager in main battle scene and use Audio Source for main menu scene and dead scene. To solve the bgm overlap problem, I use 'AudioManager.instance.bgmSource.Stop();' once the playe is dead and move to dead scene.
 
