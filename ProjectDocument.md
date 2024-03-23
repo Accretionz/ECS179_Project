@@ -6,7 +6,7 @@ Hollow Survivor takes place in a grim fantasy world where the player, a mysterio
 
 ## Project Resources
 
-- [Web-playable version of your game.](https://itch.io/)  
+- [Web-playable version of your game.](https://ryatan387.itch.io/hollow-survivor)  
 - [Trailer](https://www.youtube.com/watch?v=11ExkNFkzZY)  
 - Press Kit: Available under Press Kit folder of main directory. To see the main product press kit page navigate to ../Presskit/build/product/index.html
 
@@ -124,10 +124,14 @@ This game is all about massive hordes of mobs swarming the player. To accomplish
 
 *Tilemap* - One of the earliest parts of the game we had to implement was the map. Maps are a crucial part of any game, however, based on our experience we found that survivor type games didn't always have very interesting maps, often favoring game mechanics instead. For our game we saw an opportunity to slightly enhance the difficulty through this map by including a variety of terrain obstacles that forces players to not only focus on navigating around hordes of enemies, but also around terrain obstacles that could lead to the player's demise if they get caught on one for too long. Going along with our pixelated art style, we determined that tilemaps would be the simplest way to implement our map. To do this, I implemented two separate tilemaps, one with collision which would harbor all the terrain assets and one without collision which would include the grassy background that makes up the top-down view. To create these tilemaps we also had to use Tilepalettes to fill in each tile. While most of the map was handcrafted, I did utilize the random brush feature of the Tilepalette to help in adding variety to the forests that makeup the map borders and the terrain that makes up the interior.   
 
+[![Tilemap](ExampleImage/tilemap.png)](https://github.com/Accretionz/Hollow-Survivor/blob/master/ExampleImage/tilemap.png)
+
 *Animations* - As previously mentioned, all of our assets were outsourced, including our animations. Even then, I had no prior experience doing animations so I ended up consulting
 following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D animation tutorial when first learning how Unity animation worked. After that, it was fairly straightforward to implemented animations that came with our outsourced assets into our game. In the end, most of us ended up learning and implementing some animations along the way.
 
 *Combat System* - Although my main role was Animation and Visuals, I also ended up working on some parts of the Game Logic, mainly the player combat system in the [player combat script](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/PlayerCombat.cs), as we determined it was too big of a workload for one person. As such, I implemented all the attack animations used by the player. Although initially we had planned to give the player different weapons as they progressed through the game, we decided that instead the player's attacks would consist solely of spells. The first attack I implemented was the default horizontal slam-down attack that simulates an AoE melee attack. To do this I ended up adapting code used by [Brackeys](https://www.youtube.com/watch?v=sPiVz1k-fEs) in his melee combat tutorial for Unity. Afterwards, I was able to develop the other two spells that the player can unlock: the orbiting fireballs along with the [fireball controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/FireballController.cs) that damage any enemies they hit, as well as the four diagonal blue-fire blasts in [bluefire controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/BlueFireController.cs) that perform a similar effect. 
+
+[![Combat Showcase](ExampleImage/spell_example.gif)](https://github.com/Accretionz/Hollow-Survivor/blob/master/ExampleImage/spell_example.gif)
 
 
 **Treasure-box-finding scene - Jingdan**
