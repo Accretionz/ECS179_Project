@@ -201,8 +201,6 @@ Initially the style for this game was dark fantasy and the map would be dark for
 
 ## Gameplay Testing - Maggie Kuang
 
-**Add a link to the full results of your gameplay tests.**
-
 **Demo Version**
 
 - Players think our overall of the game has a unified art style.
