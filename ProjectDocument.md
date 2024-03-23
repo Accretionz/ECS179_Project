@@ -23,6 +23,7 @@ Hollow Survivor takes place in a grim fantasy world where the player, a mysterio
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
+
 # Main Roles #
 
 *Short Description* - Long description of your work item that includes how it is relevant to topics discussed in class. [link to evidence in your repository](https://github.com/dr-jam/ECS189L/edit/project-description/ProjectDocumentTemplate.md)
@@ -94,9 +95,11 @@ The experience bar displays the current experience at the top center of the scre
 When the game level goes up, a fading message saying "Level UP!" will show under the experience bar. This is done by the [`fading text`](https://github.com/Accretionz/Hollow-Survivor/blob/a8d086d04ea9ef618c50da82091e742d89d77bf8/Hollow/Assets/Scripts/FadingText.cs) script. A level counter is placed next to the experience bar. As the message shows, the level counter would increase by 1.
 
 
+
 **Music Control Panel/Pause Panel - Jingdan Hu**
 
-[music panel testing display](https://www.youtube.com/watch?v=OjiItP0xy8s)
+Here is the video displaying how to use the music control panel: [music panel testing display](https://www.youtube.com/watch?v=OjiItP0xy8s)
+
 
 ![Music Control Panel](https://github.com/Accretionz/Hollow-Survivor/assets/134176549/bea2f2d2-5151-4060-9b45-bd45f9a3d638)
 
@@ -108,15 +111,20 @@ The pause panel will pop up when the player clicks the upper right corner button
 [Health bar and experience bar UI](https://byandrox.itch.io/crimson-fantasy-gui)  
 [Button icons](https://gamedeveloperstudio.itch.io/icon-pack)
 
+
 ## Movement/Physics - Ryan, Jacky, Daniel, Jingdan
 
-The player movement is the usage of the basic WASD or arrow keys that allow the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game is mainly the usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
+Summary: The player movement is the usage of the basic WASD or arrow keys that allow the player to move around the 2D plane. Mob movements use NavMeshPlus for pathfinding. The physics of the game is mainly the usage of colliders to indicate when enemies interact with the player to deal damage. We also have projectiles from the player and enemies that collide with either the terrain or each other. Overall, there wasn't much physics involved when creating the game or involvement of complex movements. 
+
+Although my initial main role is movement/physics. I only wrote a basic WASD movement script for the player. Then Jacky was in charge of the player controller and finalized the animation and movement of the player. Ryan was in charge of the Enemy AI and Daniel was in charge of the projectiles including their movements. Later I focused on audio and making new scene, which I posted under the Audio and Animation and Visual.
+
 
 **Enemy AI - Ryan Tan**
 
 This game is all about massive hordes of mobs swarming the player. To accomplish this I decided to use [NavMeshPlus](https://github.com/h8man/NavMeshPlus?tab=readme-ov-file) which is a 2D pathfinding system. Using NavMesh for the enemy AI was very helpful as the map we decided to use had a lot of terrain. Using NavMesh you can designate terrain as nonwalkable and have an easy solution for the enemies to path intelligently towards the player while avoiding terrain.
 
 [![EnemyPathFind](ExampleImage/enemy_ai.png)](https://github.com/Accretionz/Hollow-Survivor/blob/916b209df54d9b49bd89a2c377cb7cac9730f2bf/ExampleImage/enemy_ai.png)
+
 
 ## Animation and Visuals - Daniel Medina
 
@@ -132,6 +140,7 @@ following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D anim
 *Combat System* - Although my main role was Animation and Visuals, I also ended up working on some parts of the Game Logic, mainly the player combat system in the [player combat script](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/PlayerCombat.cs), as we determined it was too big of a workload for one person. As such, I implemented all the attack animations used by the player. Although initially we had planned to give the player different weapons as they progressed through the game, we decided that instead the player's attacks would consist solely of spells. The first attack I implemented was the default horizontal slam-down attack that simulates an AoE melee attack. To do this I ended up adapting code used by [Brackeys](https://www.youtube.com/watch?v=sPiVz1k-fEs) in his melee combat tutorial for Unity. Afterwards, I was able to develop the other two spells that the player can unlock: the orbiting fireballs along with the [fireball controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/FireballController.cs) that damage any enemies they hit, as well as the four diagonal blue-fire blasts in [bluefire controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/BlueFireController.cs) that perform a similar effect. 
 
 [![Combat Showcase](ExampleImage/spell_example.gif)](https://github.com/Accretionz/Hollow-Survivor/blob/master/ExampleImage/spell_example.gif)
+
 
 
 **Treasure-box-finding scene - Jingdan**
