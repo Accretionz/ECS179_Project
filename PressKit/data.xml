@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Hollow Survivor</title>
+  <based-in>United States</based-in>
+  <founding-date>2024</founding-date>
+  <website></website>
+  <press-contact>
+    <!-- Mail address -->
+    damedina@ucdavis.edu
+  </press-contact>
+
+  <!-- Google analytics ID: -->
+  <analytics></analytics>
+
+  <phone></phone>
+  <address>
+    <line>
+      <!-- Street -->
+    </line>
+    <line>
+      <!-- City -->
+    </line>
+    <line>
+      <!-- Country -->
+    </line>
+  </address>
+
+  <socials>
+    <social>
+      <name></name>
+      <link>
+        <!-- URL starting with http or https -->
+      </link>
+    </social>
+  </socials>
+
+  <description></description>
+
+  <!-- Choose between a single block: -->
+  <history></history>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+  <trailers>
+    <trailer>
+      <name></name>
+
+      <!-- Pick one: -->
+      <!-- <youtube> -->
+        <!-- Video ID only, not the full URL -->
+      <!-- </youtube> -->
+      <!-- <vimeo> -->
+        <!-- Video ID only, not the full URL -->
+      <!-- </vimeo> -->
+    </trailer>
+  </trailers>
+
+  <awards>
+    <award>
+      <description></description>
+      <info></info>
+    </award>
+  </awards>
+
+  <quotes>
+    <quote>
+      <description></description>
+      <name></name>
+      <website></website>
+      <link></link>
+    </quote>
+  </quotes>
+
+  <additionals>
+    <additional>
+      <title></title>
+      <description></description>
+      <link></link>
+    </additional>
+  </additionals>
+
+  <credits>
+    <credit>
+      <person>Maggie Kuang</person>
+      <role>User Interface and Input / Gameplay Testing</role>
+
+      <!-- Optional: -->
+      <website></website>
+    </credit>
+    <credit>
+      <person>Jacky Liu</person>
+      <role>Producer / Map Design / Game Logic / Game Feel</role>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name></name>
+
+      <!-- Pick one: -->
+      <mail></mail>
+      <link></link>
+    </contact>
+  </contacts>
+</company>

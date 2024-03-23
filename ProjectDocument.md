@@ -2,13 +2,14 @@
 
 ## Summary ##
 
-Rogue Hollow takes place in a grim fantasy world where the player, a mysterious warrior who has been exiled from their homeland, must purge their world of all evil in hopes that they may one day be able to return to the land they love or die trying. As the player slays enemies, they are granted divine blessings that unlock hidden powers, make them stronger, and improve their chances of survival. However, as the player purges the world of unclean beings, the forces of evil also begin to take notice, sending greater and more powerful enemies to stop this courageous champion.
+Hollow Survivor takes place in a grim fantasy world where the player, a mysterious warrior who has been exiled from their homeland, must purge their world of all evil in hopes that they may one day be able to return to the land they love or die trying. As the player slays enemies, they are granted divine blessings that unlock hidden powers, make them stronger, and improve their chances of survival. However, as the player purges the world of unclean beings, the forces of evil also begin to take notice, sending greater and more powerful enemies to stop this courageous champion.
 
 ## Project Resources
 
-[Web-playable version of your game.](https://itch.io/)  
-[Trailor](https://youtube.com)  
-[Press Kit](https://dopresskit.com/)   
+- [Web-playable version of your game.](https://itch.io/)  
+- [Trailer](https://www.youtube.com/watch?v=11ExkNFkzZY)  
+- Press Kit: Available under Press Kit folder of main directory. To see the main product press kit page navigate to ../Presskit/build/product/index.html
+
 
 ## Gameplay Explanation ##
 
@@ -116,10 +117,18 @@ This game is all about massive hordes of mobs swarming the player. To accomplish
 
 [![EnemyPathFind](ExampleImage/enemy_ai.png)](https://github.com/Accretionz/Hollow-Survivor/blob/916b209df54d9b49bd89a2c377cb7cac9730f2bf/ExampleImage/enemy_ai.png)
 
-## Animation and Visuals
+## Animation and Visuals - Daniel Medina
 
-**List your assets, including their sources and licenses.**
+*Assets* - Even before we began working on the implementation of our game we had to decide what assets we were going to use. Since none of us had any prior experience with animation or graphics design, we decided outsourcing our assets would be the most optimal route. Because of this we didn't create any formal style guide. Still, choosing assets took a considerable amount of time since we wanted to ensure we maintained a relatively consistent art style throughout our game making sure that no asset or animation stood out too much from the rest. Early on we decided we wanted to go with a more pixelated art style to our game since we believed that would give us much more freedom when choosing our assets. 
 
+*Tilemap* - One of the earliest parts of the game we had to implement was the map. Maps are a crucial part of any game, however, based on our experience we found that survivor type games didn't always have very interesting maps, often favoring game mechanics instead. For our game we saw an opportunity to slightly enhance the difficulty through this map by including a variety of terrain obstacles that forces players to not only focus on navigating around hordes of enemies, but also around terrain obstacles that could lead to the player's demise if they get caught on one for too long. Going along with our pixelated art style, we determined that tilemaps would be the simplest way to implement our map. To do this, I implemented two separate tilemaps, one with collision which would harbor all the terrain assets and one without collision which would include the grassy background that makes up the top-down view. To create these tilemaps we also had to use Tilepalettes to fill in each tile. While most of the map was handcrafted, I did utilize the random brush feature of the Tilepalette to help in adding variety to the forests that makeup the map borders and the terrain that makes up the interior.   
+
+*Animations* - As previously mentioned, all of our assets were outsourced, including our animations. Even then, I had no prior experience doing animations so I ended up consulting
+following [Brackey's](https://www.youtube.com/watch?v=hkaysu1Z-N8) Unity 2D animation tutorial when first learning how Unity animation worked. After that, it was fairly straightforward to implemented animations that came with our outsourced assets into our game. In the end, most of us ended up learning and implementing some animations along the way.
+
+*Combat System* - Although my main role was Animation and Visuals, I also ended up working on some parts of the Game Logic, mainly the player combat system in the [player combat script](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/PlayerCombat.cs), as we determined it was too big of a workload for one person. As such, I implemented all the attack animations used by the player. Although initially we had planned to give the player different weapons as they progressed through the game, we decided that instead the player's attacks would consist solely of spells. The first attack I implemented was the default horizontal slam-down attack that simulates an AoE melee attack. To do this I ended up adapting code used by [Brackeys](https://www.youtube.com/watch?v=sPiVz1k-fEs) in his melee combat tutorial for Unity. Afterwards, I was able to develop the other two spells that the player can unlock: the orbiting fireballs along with the [fireball controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/FireballController.cs) that damage any enemies they hit, as well as the four diagonal blue-fire blasts in [bluefire controller](https://github.com/Accretionz/Hollow-Survivor/blob/77fb7fe3494279e1b0decf3e6ce44a88e89c8670/Hollow/Assets/Scripts/BlueFireController.cs) that perform a similar effect. 
+ 
+**Asset Sources:**
 
 **Player**
 - [Satyr](https://lucky-loops.itch.io/character-satyr)
@@ -128,7 +137,14 @@ This game is all about massive hordes of mobs swarming the player. To accomplish
 - [Melee Crow Mob](https://gabry-corti.itch.io/plague-crow)
 - [Ranged Bat Mob](https://gabry-corti.itch.io/assassin-bat)
 - [Boss Mob](https://assetstore.unity.com/packages/2d/characters/bringer-of-death-free-195719)
-**Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
+
+**Attack Animations**
+- [Default Attack Animation](https://nyknck.itch.io/attack-animation)
+- [Orbiting Fireball Animation + Blue Fire Spell Animation](https://bdragon1727.itch.io/free-effect-bullet-impact-explosion-32x32)
+
+**Map**
+- [Terrain Assets + Background Tileset](https://quasilyte.itch.io/roboden-tileset)
+
 
 ## Game Logic - Ryan Tan
 
@@ -183,11 +199,13 @@ Initially the style for this game was dark fantasy and the map would be dark for
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 Our game was inspired by *Vampire Survivor* and *Hollow Knight*. We tried picking assets that had the same dark fantasy theme as *Hollow Knight*. To be honest there isn't much of a narrative we are trying to push except surviving through waves of mob to level up and get stronger and kill even more mobs. 
 
-## Press Kit and Trailer
+## Press Kit and Trailer - Daniel Medina
 
-**Include links to your presskit materials and trailer.**
+- [Hollow Survivor Trailer](https://www.youtube.com/watch?v=11ExkNFkzZY)
 
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
+For the trailer I chose to go for an overall horror type theme to fit well with the dark fantasy aesthetic we were going for with our game. The trailer starts with a slightly more narrative focus, first introducing the player to the main protagonist. Afterwards, the trailer gives a slight preview of the map and terrain with a slow pan and then introduces each of the two main enemy types without yet revealing their purpose. The trailer then becomes slightly more dramatic as it starts to show the player the main gameplay features including navigation around enemies and terrain, as well as the combat potential of the player. The trailer ends giving a teaser of the game's main boss enemy. Overall, I wanted to make sure the trailer showcased a little from all aspects of the game including the player, the map, the enemies, the combat gameplay, and the main boss. 
+
+- Presskit is available in repository's root directory under PressKit. To access the game's main product presskit, navigate to ../Presskit/build/product/index.html
 
 ## Game Feel and Polish - Jacky Liu
 

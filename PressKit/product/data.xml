@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<product>
+  <title>Hollow Survivor</title>
+  <release-dates>
+    <release-date>March 22, 2024</release-date>
+  </release-dates>
+  <website></website>
+
+  <!-- Link to request press copy: -->
+  <press-copy-request></press-copy-request>
+
+  <platforms>
+    <platform>
+      <name>Itch.io</name>
+      <link></link>
+    </platform>
+  </platforms>
+
+  <prices>
+    <price>
+      <currency>Free</currency>
+      <value></value>
+    </price>
+  </prices>
+
+  <description>
+  Hollow Survivor is a rogue-like survivor game that takes place in a grim fantasy world where the player, a mysterious warrior who has been exiled from their homeland, must purge their world of all evil in hopes that they may one day be able to return to the land they love or die trying. As the player slays enemies, they are granted divine blessings that unlock hidden powers, make them stronger, and improve their chances of survival. However, as the player purges the world of unclean beings, the forces of evil also begin to take notice, sending greater and more powerful enemies to stop this courageous champion.
+  </description>
+
+  <!-- Choose between a single block: -->
+  <history></history>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+  <features>
+    <feature>
+    The basic movement of the game is `wasd` or the `arrow keys` where `a` or `left arrow` would move the player left.
+    </feature>
+    <feature>
+    Combat system for the player's attack is `automatic` with a time delay.
+    </feature>
+    <feature>
+    Navigate across the terrian as you avoid the incoming enemies while trying to slay them to gain experience points.
+    </feature>
+    <feature>
+    Experience points allow user to level up and get stronger with new abilities the higher level you are.
+    </feature>
+    <feature>
+    Enemies spawn around you and moves toward the player in an attempt to attack you.
+    </feature>
+    <feature>
+    Every minute a boss monster spawns that has tons more health and does more damage with unique attack skill
+    </feature>
+    <feature>
+    Timer system to keep track of total survival time as you aim to be the longest survived.
+    </feature>
+
+  </features>
+
+  <trailers>
+    <trailer>
+      <name></name>
+
+      <!-- Pick one: -->
+      <youtube>
+      11ExkNFkzZY
+        <!-- Video ID only, not the full URL -->
+      </youtube>
+      <!-- <vimeo> -->
+        <!-- Video ID only, not the full URL -->
+      <!-- </vimeo> -->
+    </trailer>
+  </trailers>
+
+  <!-- You can set your widgets here (optional): -->
+  <widgets>
+    <!-- <steam> -->
+      <!-- Steam ID -->
+      <!-- e.g. 424242 -->
+    <!-- </steam> -->
+    <!-- <humble> -->
+      <!-- Humble Bundle product/id -->
+      <!-- e.g. mysupergame/42AAbB42dC -->
+    <!-- </humble> -->
+    <itch>
+    2600680
+      <!-- itch.io ID -->
+      <!-- e.g. 42424 -->
+    </itch>
+    <!-- <gamejolt> -->
+      <!-- Game Jolt package ID -->
+      <!-- e.g. 4AbCd2Ef -->
+    <!-- </gamejolt> -->
+    <!-- <bandcamp> -->
+      <!-- Bandcamp ID -->
+      <!-- e.g. 4242424242 -->
+    <!-- </bandcamp> -->
+  </widgets>
+
+  <awards>
+    <award>
+      <description></description>
+      <info></info>
+    </award>
+  </awards>
+
+  <quotes>
+    <quote>
+      <description></description>
+      <name></name>
+      <website></website>
+      <link></link>
+    </quote>
+  </quotes>
+
+  <additionals>
+    <additional>
+      <title></title>
+      <description></description>
+      <link></link>
+    </additional>
+  </additionals>
+
+  <credits>
+    <credit>
+      <person></person>
+      <role></role>
+
+      <!-- Optional: -->
+      <website></website>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name></name>
+
+      <!-- Pick one: -->
+      <mail></mail>
+      <link></link>
+    </contact>
+  </contacts>
+</product>
